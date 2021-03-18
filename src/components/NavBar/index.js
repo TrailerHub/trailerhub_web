@@ -20,7 +20,7 @@ const NavBar = ({ toggle }) => {
             <IconContext.Provider value={{ color: '#1b1b1b' }}>
                 <Nav scrollNav={scrollNav}>
                     <NavBarContainer>
-                        <NavLogo to='/' onClick={toggleHome}>Z</NavLogo>
+                        <NavLogo to='/' onClick={toggleHome}><img src="/images/trailerhub_logo.svg" alt="TrailerHub Logo"/></NavLogo>
                         <MobileIcon onClick={toggle}>
                             <FaBars />
                         </MobileIcon>
@@ -29,11 +29,17 @@ const NavBar = ({ toggle }) => {
                                 <NavLinks to="about" smooth={true} duration={500} spy={true} exact='true' offset={-80}>About</NavLinks>
                             </NavItem>
                             <NavItem>
-                                <NavLinks to="blah" smooth={true} duration={500} spy={true} exact='true' offset={-80}>Blah</NavLinks>
+                                <NavLinks to="rent" smooth={true} duration={500} spy={true} exact='true' offset={-80}>Rent</NavLinks>
+                            </NavItem>
+                            <NavItem>
+                                <NavLinks to="host" smooth={true} duration={500} spy={true} exact='true' offset={-80}>Host</NavLinks>
+                            </NavItem>
+                            <NavItem>
+                                <NavLinks to="business" smooth={true} duration={500} spy={true} exact='true' offset={-80}>Business</NavLinks>
                             </NavItem>
                         </NavMenu>
                         <NavBtn>
-                            <NavBtnLink as="a" target="_blank" href="https://github.com/zoeschmitt">Contact</NavBtnLink>
+                            <NavBtnLink as="a" target="_blank" href="https://github.com/zoeschmitt" scrollNav={scrollNav}>Contact Us</NavBtnLink>
                         </NavBtn>
                     </NavBarContainer>
                 </Nav>

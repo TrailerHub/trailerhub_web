@@ -1,11 +1,12 @@
 import { Link as LinkS } from 'react-scroll'
 import styled from 'styled-components'
+import { trailerHubBlue } from '../colors'
 
 export const Button = styled(LinkS)`
-    border-radius: 16px;
-    background: #48adf5;
+    border-radius: 12px;
+    background: #373737;
     white-space: nowrap;
-    padding: ${({big}) => (big ? '14px 48px' : '12px 30px')};
+    padding: ${({big}) => (big ? '12px 30px' : '12px 30px')};
     color: #fff;
     font-size: ${({fontBig}) => (fontBig ? '20px' : '16px')};
     outline: none;
@@ -17,8 +18,10 @@ export const Button = styled(LinkS)`
     transition: all 0.2s ease-in-out;
 
     &:hover {
+        transform: scale(1.05);
+        color: #fff;
         transition: all 0.2s ease-in-out;
-        background: ${({primary}) => (primary ? '#E0E0E0' : '#48adf5')};
-        color: ${({dark}) => (dark ? '#1b1b1b' : '#fff')};
+        background: ${trailerHubBlue};
+        /* color: ${({dark}) => (dark ? '#1b1b1b' : '#fff')}; */
     }
 `

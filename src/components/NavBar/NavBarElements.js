@@ -3,16 +3,19 @@ import { Link as LinkR } from 'react-router-dom'
 import { Link as LinkS } from 'react-scroll'
  
 export const Nav = styled.nav`
-    background: ${({scrollNav}) => scrollNav ? '#fafafa' : 'transparent'};
+    background: ${({scrollNav}) => scrollNav ? 'rgba(255, 255, 255, 0.3)' : 'transparent'};
     height: 80px;
     margin-top: -80px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1rem;
+    font-size: 1.1rem;
     position: sticky;
     top: 0;
     z-index: 10;
+    color: ${({scrollNav}) => scrollNav ? '#000' : '#fff'};
+    backdrop-filter: ${({scrollNav}) => scrollNav ? 'blur(5px)' : 'none'};
+    -webkit-backdrop-filter: ${({scrollNav}) => scrollNav ? 'blur(5px)' : 'none'}; 
 
     @media screen and (max-width: 960px) {
         transition: 0.8s all ease;
@@ -25,19 +28,23 @@ export const NavBarContainer = styled.div`
     height: 80px;
     z-index: 1;
     width: 100%;
-    padding: 0 24px;
-    max-width: 1100px;
+    padding: 0 140px;
+
+    @media screen and (max-width: 768px) {
+        padding: 0 50px;
+    }
+
+    @media screen and (max-width: 480px) {
+        padding: 0 20px;
+    }
 `;
 
 export const NavLogo = styled(LinkS)`
-    color: #1b1b1b;
     justify-self: flex-start;
     cursor: pointer;
-    font-size: 2rem;
     display: flex;
     align-items: center;
     margin-left: 24px;
-    font-weight: bold;
     text-decoration: none;
 `;
 
@@ -75,13 +82,16 @@ export const NavItem = styled.li`
 `;
 
 export const NavLinks = styled(LinkS)`
-    color: #1b1b1b;
+    /* color: #fff; */
     display: flex;
     align-items: center;
     text-decoration: none;
+    //font-size: 1.1rem;
     padding: 0 1rem;
     height: 100%;
     cursor: pointer;
+    font-weight: 400;
+    padding-right: 30px;
 
     &.active {
         border-bottom: 3px solid #48adf5;
@@ -98,8 +108,8 @@ export const NavBtn = styled.nav`
 `;
 
 export const NavBtnLink = styled(LinkR)`
-    border-radius: 15px;
-    background: #48adf5;
+    border-radius: 12px;
+    background: ${({scrollNav}) => scrollNav ? '#373737' : 'rgba(255, 255, 255, 0.3)'};
     white-space: nowrap;
     padding: 10px 22px;
     color: #fff;
@@ -111,8 +121,9 @@ export const NavBtnLink = styled(LinkR)`
     text-decoration: none;
 
     &:hover {
+        transform: scale(1.05);
         transition: all 0.2s ease-in-out;
-        background: #E0E0E0;
-        color: #1b1b1b;
+        background: #373737;
+        color: #fff;
     }
 `;
