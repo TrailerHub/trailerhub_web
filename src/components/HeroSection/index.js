@@ -9,9 +9,7 @@ const HeroSection = () => {
     };
     return (
         <HeroContainer id="home">
-            <HeroBg>
-
-            </HeroBg>
+            <HeroBg src="/images/hero_shape.svg" alt="Shape"/>
             <HeroWrapper>
                 <HeroContent>
                     <HeroH1>Rent trailers near you</HeroH1>

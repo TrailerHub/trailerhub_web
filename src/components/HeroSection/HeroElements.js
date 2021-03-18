@@ -10,23 +10,13 @@ export const HeroContainer = styled.div`
     z-index: 1;
 `;
 
-export const HeroBg = styled.div`
+export const HeroBg = styled.img`
     z-index: 1;
     position: absolute;
-    /* width: 1070px; */
-    width: 70%;
-    height: 400px;
+    height: 50%;
     right: 0;
-    top: 0px;
-    border-radius: 0 0 0 102px;
-    overflow: hidden;
-    clip-path: stroke-box;
-    background: linear-gradient(104.2deg, #54AEF0 -26.26%, #60E783 123.52%);
-    /* transform: skew(30deg, 0deg); */
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 40% 100%);
-    
-    border-radius: 0 0 0 102px;
-    /* TODO add smaller widh and height for screens here */
+    top: 0;
+    padding: 0;
 `;
 
 export const HeroWrapper = styled.div`

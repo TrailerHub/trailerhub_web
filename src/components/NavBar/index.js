@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Nav, NavBarContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks, NavBtn, NavBtnLink } from './NavBarElements';
+import { Nav, LogoImage, NavBarContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks, NavBtn, NavBtnLink } from './NavBarElements';
 import { FaBars } from 'react-icons/fa';
 import { IconContext } from 'react-icons/lib';
 import { animateScroll as scroll } from 'react-scroll';
@@ -20,7 +20,7 @@ const NavBar = ({ toggle }) => {
             <IconContext.Provider value={{ color: '#1b1b1b' }}>
                 <Nav scrollNav={scrollNav}>
                     <NavBarContainer>
-                        <NavLogo to='/' onClick={toggleHome}><img src="/images/trailerhub_logo.svg" alt="TrailerHub Logo"/></NavLogo>
+                        <NavLogo to='/' onClick={toggleHome}><LogoImage src="/images/trailerhub_logo.svg" alt="TrailerHub Logo"/></NavLogo>
                         <MobileIcon onClick={toggle}>
                             <FaBars />
                         </MobileIcon>

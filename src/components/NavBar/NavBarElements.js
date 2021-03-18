@@ -9,13 +9,13 @@ export const Nav = styled.nav`
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     position: sticky;
     top: 0;
     z-index: 10;
     color: ${({scrollNav}) => scrollNav ? '#000' : '#fff'};
-    backdrop-filter: ${({scrollNav}) => scrollNav ? 'blur(5px)' : 'none'};
-    -webkit-backdrop-filter: ${({scrollNav}) => scrollNav ? 'blur(5px)' : 'none'}; 
+    /* backdrop-filter: ${({scrollNav}) => scrollNav ? 'blur(5px)' : 'none'};
+    -webkit-backdrop-filter: ${({scrollNav}) => scrollNav ? 'blur(5px)' : 'none'};  */
 
     @media screen and (max-width: 960px) {
         transition: 0.8s all ease;
@@ -48,11 +48,17 @@ export const NavLogo = styled(LinkS)`
     text-decoration: none;
 `;
 
+export const LogoImage = styled.img`
+    @media screen and (max-width: 1200px) {
+        filter:  brightness(0) invert(1);
+    }
+`
+
 export const MobileIcon = styled.div`
     display: none;
 
-    @media screen and (max-width: 768px) {
-        color: #1b1b1b;
+    @media screen and (max-width: 780px) {
+        filter:  brightness(0) invert(1);
         display: block;
         position: absolute;
         top: 0;
@@ -70,7 +76,7 @@ export const NavMenu = styled.ul`
     text-align: center;
     margin-right: -22px;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 780px) {
         display: none;
     }
 `;
@@ -102,7 +108,7 @@ export const NavBtn = styled.nav`
     display: flex;
     align-items: center;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 780px) {
         display: none;
     }
 `;

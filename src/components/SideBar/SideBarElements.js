@@ -2,13 +2,14 @@ import styled from 'styled-components'
 import { Link as LinkR } from 'react-router-dom'
 import { Link as LinkS } from 'react-scroll'
 import { FaTimes } from 'react-icons/fa'
+import { trailerHubBlue, trailerHubBlack, trailerHubGradient, whiteWithLowOpacity } from '../../colors';
 
 export const SideBarContainer = styled.aside`
     position: fixed;
     z-index: 999; //no matter what itll always be on top
     width: 100%;
     height: 100%;
-    background: #1b1b1b;
+    background: ${trailerHubGradient};
     display: grid;
     align-items: center;
     top: 0;
@@ -20,6 +21,11 @@ export const SideBarContainer = styled.aside`
 
 export const CloseIcon = styled(FaTimes)`
     color: #fff;
+
+    &:hover {
+        color: ${trailerHubBlack};
+        transition: 0.2s ease-in-out;
+    }
 `;
 
 export const Icon = styled.div`
@@ -60,7 +66,7 @@ export const SideBarLink = styled(LinkS)`
     cursor: pointer;
 
     &:hover {
-        color: #48adf5;
+        color: ${trailerHubBlack};
         transition: 0.2s ease-in-out;
     }
 `;
@@ -72,7 +78,7 @@ export const SideBtnWrap = styled.div`
 
 export const SideBarRoute = styled(LinkR)`
     border-radius: 15px;
-    background: #48adf5;
+    background: ${whiteWithLowOpacity};
     white-space: nowrap;
     padding: 16px 64px;
     color: #fff;
@@ -84,8 +90,9 @@ export const SideBarRoute = styled(LinkR)`
     text-decoration: none;
 
     &:hover {
+        transform: scale(1.05);
         transition: all 0.2s ease-in-out;
-        background: #fff;
-        color: #1b1b1b;
+        background: #373737;
+        color: #fff;
     }
 `;
