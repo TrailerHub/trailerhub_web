@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { Link as LinkR } from 'react-router-dom'
 import { Link as LinkS } from 'react-scroll'
 import { FaTimes } from 'react-icons/fa'
-import { trailerHubBlue, trailerHubBlack, trailerHubGradient, whiteWithLowOpacity } from '../../colors';
+import { trailerHubBlack, trailerHubGradient, whiteWithLowOpacity } from '../../colors';
 
 export const SideBarContainer = styled.aside`
     position: fixed;

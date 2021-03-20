@@ -1,6 +1,6 @@
 import { Link as LinkS } from 'react-scroll'
 import styled from 'styled-components'
-import { trailerHubBlack, trailerHubBlue, trailerHubGreen } from '../colors'
+import { trailerHubBlack, trailerHubGreen } from '../colors'
 
 export const Button = styled(LinkS)`
     border-radius: 12px;

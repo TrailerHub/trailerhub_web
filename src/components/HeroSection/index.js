@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { HeroContainer, Image, ImageContainer, HeroWrapper, HeroBg, HeroContent, HeroH1, HeroP, HeroBtnWrapper, ArrowForward, ArrowRight } from './HeroElements';
+import { HeroContainer, Image, ImageContainer, HeroWrapper, HeroBg, HeroContent, HeroH1, HeroP, HeroBtnWrapper } from './HeroElements';
 import { Button } from '../ButtonElements'
 
 const HeroSection = () => {

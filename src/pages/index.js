@@ -3,7 +3,7 @@ import Cards from '../components/Cards'
 import Footer from '../components/Footer'
 import HeroSection from '../components/HeroSection'
 import InfoSection from '../components/InfoSection'
-import { secFour, secOne, secThree, secTwo, secFive, secSix } from '../components/InfoSection/data'
+import { secOne, secThree, secTwo } from '../components/InfoSection/data'
 import NavBar from '../components/NavBar'
 import SideBar from '../components/SideBar'
 
