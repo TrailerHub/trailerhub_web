@@ -20,7 +20,7 @@ const NavBar = ({ toggle }) => {
             <IconContext.Provider value={{ color: '#1b1b1b' }}>
                 <Nav scrollNav={scrollNav}>
                     <NavBarContainer>
-                        <NavLogo to='/' onClick={toggleHome}><LogoImage src="/images/trailerhub_logo.svg" alt="TrailerHub Logo"/></NavLogo>
+                        <NavLogo to='/' onClick={toggleHome}><LogoImage src="/images/logo_title.svg" alt="TrailerHub Logo"/></NavLogo>
                         <MobileIcon onClick={toggle}>
                             <FaBars />
                         </MobileIcon>

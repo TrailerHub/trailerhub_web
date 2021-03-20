@@ -1,5 +1,5 @@
 import React from 'react'
-import { FooterContainer, NavLogo, ContactLink, ContactInfoWrap, FooterWrap } from './FooterElements'
+import { FooterContainer, FooterWrapper, LogoContainer, ContentContainer, CopyRightText, FooterNoLink, FooterLink, LogoImage, FooterSubHeading } from './FooterElements'
 import { animateScroll as scroll } from 'react-scroll';
 
 const Footer = () => {
@@ -7,16 +7,30 @@ const Footer = () => {
         scroll.scrollToTop();
     };
     return (
-        <FooterContainer>
-            <FooterWrap>
-                <NavLogo to='/' onClick={toggleHome}>T</NavLogo>
-                <ContactInfoWrap>
-                    <ContactLink as="a" target="_blank" href="mailto:zoeschmitt@hotmail.com">Email</ContactLink>
-                    <ContactLink as="a" target="_blank" href="https://www.linkedin.com/in/zmschmitt/">LinkedIn</ContactLink>
-                    <ContactLink as="a" target="_blank" href="https://github.com/zoeschmitt">Github</ContactLink>
-                </ContactInfoWrap>
-            </FooterWrap>
-        </FooterContainer>
+        <FooterWrapper>
+            <FooterContainer>
+                <ContentContainer>
+                    <LogoContainer to='/' onClick={toggleHome}>
+                        <LogoImage src="/images/logo_title.svg" alt="TrailerHub Logo" />
+                    </LogoContainer>
+                    <CopyRightText>TrailerHub, Inc.</CopyRightText>
+                </ContentContainer>
+                <ContentContainer>
+                    <FooterSubHeading>Company</FooterSubHeading>
+                    <FooterLink to="about" smooth={true} duration={500} spy={true} exact='true'>About</FooterLink>
+                    <FooterLink to="rent" smooth={true} duration={500} spy={true} exact='true'>Rent</FooterLink>
+                    <FooterLink to="host" smooth={true} duration={500} spy={true} exact='true'>Host</FooterLink>
+                    <FooterLink to="business" smooth={true} duration={500} spy={true} exact='true'>Business</FooterLink>
+                </ContentContainer>
+                <ContentContainer>
+                    <FooterSubHeading>Get in Touch</FooterSubHeading>
+                    <FooterNoLink>(219) - 394 - 2933</FooterNoLink>
+                    <FooterNoLink>support@trailerhub.io</FooterNoLink>
+                    <FooterNoLink>(219) - 394 - 2933</FooterNoLink>
+                    <FooterNoLink>support@trailerhub.io</FooterNoLink>
+                </ContentContainer>
+            </FooterContainer>
+        </FooterWrapper>
     )
 }
 

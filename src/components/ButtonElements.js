@@ -1,6 +1,6 @@
 import { Link as LinkS } from 'react-scroll'
 import styled from 'styled-components'
-import { trailerHubBlue } from '../colors'
+import { trailerHubBlack, trailerHubBlue, trailerHubGreen } from '../colors'
 
 export const Button = styled(LinkS)`
     border-radius: 12px;
@@ -21,7 +21,13 @@ export const Button = styled(LinkS)`
         transform: scale(1.05);
         color: #fff;
         transition: all 0.2s ease-in-out;
-        background: ${trailerHubBlue};
+        background: ${trailerHubGreen};
         /* color: ${({dark}) => (dark ? '#1b1b1b' : '#fff')}; */
+    }
+
+    @media screen and (max-width: 480px) {
+        &:hover {
+            background: ${trailerHubBlack};
+        }
     }
 `
