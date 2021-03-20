@@ -1,9 +1,10 @@
 import styled from 'styled-components'
 import { Link as LinkS } from 'react-scroll'
-import { trailerHubBlack, trailerHubBlue, trailerHubGreen } from '../../colors'
+import { trailerHubBlack, trailerHubGreen, trailerHubGrey } from '../../colors'
 
 export const FooterWrapper = styled.div`
     background-color: #fff;
+    border-top: 1px solid ${trailerHubGrey};
 `
 
 export const FooterContainer = styled.footer`

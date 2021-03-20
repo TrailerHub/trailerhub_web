@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Cards from '../components/Cards'
 import Footer from '../components/Footer'
 import HeroSection from '../components/HeroSection'
 import InfoSection from '../components/InfoSection'
@@ -16,14 +17,12 @@ const Home = () => {
             <SideBar isOpen={isOpen} toggle={toggle} />
             <NavBar toggle={toggle} />
             <HeroSection />
-            {/* <InfoSection {...secOne} /> */}
-            {/* <div id="mywork">
+            <Cards />
+            {/* <div className='bg-shape'> <h1>blah</h1></div> */}
+            {/* <img src='/images/grey_shape.svg' alt='shape' className='bg-shape'></img> */}
+                <InfoSection {...secOne} />
                 <InfoSection {...secTwo} />
                 <InfoSection {...secThree} />
-                <InfoSection {...secFour} />
-                <InfoSection {...secFive} />
-                <InfoSection {...secSix} />
-            </div> */}
             <Footer />
         </>
     )
