@@ -5,9 +5,9 @@ import { trailerHubBlack, trailerHubGreen } from '../../colors'
 export const LinkButtonContainer = styled.div`
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     padding: 0 1rem 0 0;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: ${trailerHubGreen};
     transition: all 0.2s ease-in-out;
 
@@ -16,7 +16,8 @@ export const LinkButtonContainer = styled.div`
     }
 
     @media screen and (max-width: 900px) {
-        color: ${trailerHubBlack};
+        color: ${({dark}) => (dark ? `${trailerHubBlack}` : `${trailerHubGreen}`)};
+        justify-content: center;
     }
 `
 

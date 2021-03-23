@@ -21,8 +21,8 @@ const HeroSection = () => {
                             } primary="true" dark="true"
                             >Learn More </Button>
                         </HeroBtnWrapper>
-                        <LinkButton label={'iOS'} />
-                        <LinkButton label={'Android'} />
+                        <LinkButton label={'iOS'} dark={true}/>
+                        <LinkButton label={'Android'} dark={true}/>
                     </ButtonsWrapper>
                 </HeroContent>
                 <ImageContainer><Image src="/images/trailerhub1.svg" alt="TrailerHub Search Screen" /></ImageContainer>

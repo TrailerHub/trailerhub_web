@@ -23,7 +23,7 @@ export const HeroBg = styled.img`
     }
 
     @media screen and (max-width: 480px) {
-        height: 50%;
+        height: 55%;
     }
 `;
 
