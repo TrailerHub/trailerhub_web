@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { Link as LinkR } from 'react-router-dom'
 import { Link as LinkS } from 'react-scroll'
 import { trailerHubGreen } from '../../colors'
  
@@ -127,7 +126,7 @@ export const NavBtn = styled.div`
     }
 `;
 
-export const NavBtnLink = styled(LinkR)`
+export const NavBtnLink = styled.button`
     border-radius: 12px;
     background: ${({scrollNav}) => scrollNav ? '#373737' : 'rgba(255, 255, 255, 0.3)'};
     white-space: nowrap;

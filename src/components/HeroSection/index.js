@@ -21,11 +21,11 @@ const HeroSection = () => {
                             } primary="true" dark="true"
                             >Learn More </Button>
                         </HeroBtnWrapper>
-                        <LinkButton label={'iOS'} dark={true}/>
-                        <LinkButton label={'Android'} dark={true}/>
+                        {/* <LinkButton label={'iOS'} dark={true}/>
+                        <LinkButton label={'Android'} dark={true}/> */}
                     </ButtonsWrapper>
                 </HeroContent>
-                <ImageContainer><Image src="/images/trailerhub1.svg" alt="TrailerHub Search Screen" /></ImageContainer>
+                <ImageContainer><Image src="/images/trailerhub_search_page.svg" alt="TrailerHub Search Screen" /></ImageContainer>
             </HeroWrapper>
         </HeroContainer>
     )

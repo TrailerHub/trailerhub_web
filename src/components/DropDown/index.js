@@ -13,6 +13,7 @@ const DropDown = ({ isActive }) => {
                     <BodyP>(210) - 383 - 7022</BodyP>
                     <BodyP>(210) - 251 - 6672</BodyP>
                     <BodyP>zoe@trailerhub.io</BodyP>
+                    <BodyP>r.schmitt@trailerhub.io</BodyP>
                 </ContentWrapper>
             </DropDownWrapper>
         </DropDownContainer>

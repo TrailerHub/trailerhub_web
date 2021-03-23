@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { trailerHubBlack, trailerHubGreen } from '../../colors'
+import { trailerHubGreen } from '../../colors'
 
 export const DropDownContainer = styled.div`
     position: absolute;
@@ -37,6 +37,6 @@ export const TitleH1 = styled.h1`
 
 export const BodyP = styled.p`
     font-size: 1rem;
-    line-height: 1.5rem;
-    color: ${trailerHubBlack};
+    line-height: 1.7rem;
+    color: #9e9e9e;
 `

@@ -1,13 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Nav, LogoImage, NavBarContainer, BtnDropDownWrapper, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks, NavBtn, NavBtnLink } from './NavBarElements';
 import { FiMenu } from 'react-icons/fi';
 import { animateScroll as scroll } from 'react-scroll';
 import DropDown from '../DropDown';
+import { useDetectOutsideClick } from '../../hooks/useDetectOutsideClick';
 
 const NavBar = ({ toggle }) => {
     const [scrollNav, setScrollNav] = useState(false);
-    const [open, setOpen] = useState(false);
-
+    const dropdownRef = useRef(null);
+    const [open, setOpen] = useDetectOutsideClick(dropdownRef, false);
+    const onClick = () => setOpen(!open);
+    
     const changeNav = () => {
         window.scrollY >= 80 ? setScrollNav(true) : setScrollNav(false);
     };
@@ -20,16 +23,9 @@ const NavBar = ({ toggle }) => {
         scroll.scrollToTop();
     };
 
-    const handleMouseEnter = () => {
-        setOpen(true);
-    }
-    const handleMouseLeave = () => {
-        setOpen(false);
-    }
-
     return (
         <>
-            <Nav scrollNav={scrollNav}>
+            <Nav scrollNav={scrollNav} >
                 <NavBarContainer>
                     <NavLogo to='/' onClick={toggleHome} ><LogoImage src="/images/logo_title.svg" alt="TrailerHub Logo" scrollNav={scrollNav} /></NavLogo>
                     <MobileIcon onClick={toggle} scrollNav={scrollNav}>
@@ -49,9 +45,9 @@ const NavBar = ({ toggle }) => {
                             <NavLinks to="business" smooth={true} duration={500} spy={true} exact='true' offset={-80}>Business</NavLinks>
                         </NavItem>
                     </NavMenu>
-                    <BtnDropDownWrapper>
+                    <BtnDropDownWrapper ref={dropdownRef}>
                         <NavBtn>
-                            <NavBtnLink onMouseEnter={() => handleMouseEnter()} onMouseLeave={() => handleMouseLeave()} scrollNav={scrollNav}>Contact Us</NavBtnLink>
+                            <NavBtnLink onClick={onClick} scrollNav={scrollNav}>Contact Us</NavBtnLink>
                         </NavBtn>
                         {open && <DropDown isActive={open} />}
                     </BtnDropDownWrapper>

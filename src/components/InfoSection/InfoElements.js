@@ -107,6 +107,10 @@ export const ImgWrap = styled.div`
     }
 `;
 
+export const InfoSectionImg = styled.img`
+    width: 70%;
+`
+
 export const ButtonsWrapper = styled.div`
     margin-top: 32px;
     width: 70%;

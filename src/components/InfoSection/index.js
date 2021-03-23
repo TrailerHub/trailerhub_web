@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Button } from '../ButtonElements'
 import LinkButton from '../LinkButton';
-import { Column2, ImgWrap, InfoContainer, ButtonsWrapper, InfoWrapper, InfoRow, Column1, TextWrapper, TopLine, Heading, Subtitle, BigBtnWrapper, ArrowForward, ArrowRight } from './InfoElements'
+import { Column2, ImgWrap, InfoContainer, InfoSectionImg, ButtonsWrapper, InfoWrapper, InfoRow, Column1, TextWrapper, TopLine, Heading, Subtitle, BigBtnWrapper, ArrowForward, ArrowRight } from './InfoElements'
 
 const InfoSection = ({ lightBg, id, imgStart, topLine, lightText, headline, darkText, description, buttonLabel, alt, img, primary, dark, dark2, linkButton, buttonLinkTo }) => {
     const [hover, setHover] = useState(false);
@@ -26,14 +26,14 @@ const InfoSection = ({ lightBg, id, imgStart, topLine, lightText, headline, dark
                                             >{buttonLabel}{hover ? <ArrowForward style={{ transform: `rotate(90deg)` }} /> : <ArrowRight style={{ transform: `rotate(90deg)` }} />}</Button>
                                         </BigBtnWrapper> : null
                                     }
-                                    <LinkButton label={'iOS'}/>
-                                    <LinkButton label={'Android'}/>
+                                    {/* <LinkButton label={'iOS'}/>
+                                    <LinkButton label={'Android'}/> */}
                                 </ButtonsWrapper>
                             </TextWrapper>
                         </Column1>
                         <Column2>
                             <ImgWrap imgStart={imgStart}>
-                                <img src={img} alt={alt} />
+                                <InfoSectionImg src={img} alt={alt} />
                             </ImgWrap>
                         </Column2>
                     </InfoRow>
