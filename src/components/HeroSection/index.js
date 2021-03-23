@@ -25,7 +25,7 @@ const HeroSection = () => {
                         <LinkButton label={'Android'} dark={true}/> */}
                     </ButtonsWrapper>
                 </HeroContent>
-                <ImageContainer><Image src="/images/trailerhub_search_page.svg" alt="TrailerHub Search Screen" /></ImageContainer>
+                <ImageContainer><Image src="/images/trailerhub_search_page.png" alt="TrailerHub Search Screen" /></ImageContainer>
             </HeroWrapper>
         </HeroContainer>
     )

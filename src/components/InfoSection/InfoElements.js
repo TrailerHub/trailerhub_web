@@ -28,10 +28,10 @@ export const InfoRow = styled.div`
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    grid-template-areas: ${({imgStart}) => (imgStart ? `'col2 col1'` : `'col1 col2'`)};
+    grid-template-areas: ${({ imgStart }) => (imgStart ? `'col2 col1'` : `'col1 col2'`)};
 
     @media screen and (max-width: 768px) {
-        grid-template-areas: ${({imgStart}) => (imgStart ? `'col1 col2'` : `'col1 col2' 'col2 col1'`)};
+        grid-template-areas: ${({ imgStart }) => (imgStart ? `'col1 col2'` : `'col1 col2' 'col2 col1'`)};
     }
 
     @media screen and (max-width: 620px) {
@@ -43,7 +43,7 @@ export const InfoRow = styled.div`
 
 export const Column1 = styled.div`
     display: flex;
-    justify-content: ${({imgStart}) => (imgStart ? 'flex-end' : 'flex-start')};
+    justify-content: ${({ imgStart }) => (imgStart ? 'flex-end' : 'flex-start')};
     grid-area: col1;
 `;
 
@@ -96,19 +96,21 @@ export const Subtitle = styled.p`
 `;
 
 export const ImgWrap = styled.div`
-    display: flex;
-    align-content: center;
-    justify-content: ${({imgStart}) => (imgStart ? 'flex-start' : 'flex-end')};
-    width: 100%;
+    display:flex;
+    flex-direction: column;
+    align-items: ${({ imgStart }) => (imgStart ? 'flex-start' : 'flex-end')};
+    //justify-content: center;
     padding:  0 50px;
 
     @media screen and (max-width: 620px) {
-        justify-content: center;
+        align-items: center;
+        padding:  0;
     }
 `;
 
 export const InfoSectionImg = styled.img`
-    width: 70%;
+   
+    width: 60%;
 `
 
 export const ButtonsWrapper = styled.div`
@@ -124,6 +126,7 @@ export const ButtonsWrapper = styled.div`
         grid-template-columns: 1fr;
         grid-row-gap: 10px;
         justify-content: center;
+        align-items: center;
         width: 100%;
     }
 `
@@ -134,6 +137,10 @@ export const BigBtnWrapper = styled.div`
 
     @media screen and (max-width: 620px) {
         justify-content: center;
+    }
+
+    @media screen and (max-width: 900px) {
+        margin-right: 0;
     }
 `;
 

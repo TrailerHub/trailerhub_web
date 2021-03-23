@@ -108,6 +108,7 @@ export const HeroP = styled.div`
 
     @media screen and (max-width: 480px) {
         text-align: center;
+        line-height: 1.5rem;
     }
 `;
 
@@ -130,5 +131,9 @@ export const HeroBtnWrapper = styled.div`
 
     @media screen and (max-width: 480px) {
         margin-top: 15px;
+    }
+
+    @media screen and (max-width: 900px) {
+        margin-right: 0;
     }
 `;

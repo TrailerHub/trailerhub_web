@@ -9,37 +9,35 @@ const InfoSection = ({ lightBg, id, imgStart, topLine, lightText, headline, dark
         setHover(!hover);
     };
     return (
-        <>
-            <InfoContainer lightBg={lightBg} id={id}>
-                <InfoWrapper>
-                    <InfoRow imgStart={imgStart}>
-                        <Column1 imgStart={imgStart}>
-                            <TextWrapper>
-                                <TopLine>{topLine}</TopLine>
-                                <Heading lightText={lightText}>{headline}</Heading>
-                                <Subtitle darkText={darkText}>{description}</Subtitle>
-                                <ButtonsWrapper>
-                                    {linkButton ?
-                                        <BigBtnWrapper>
-                                            <Button to={buttonLinkTo} smooth={true} duration={500} spy={true} exact='true' onMouseEnter={onHover} onMouseLeave={onHover
-                                            } primary="true" dark="true"
-                                            >{buttonLabel}{hover ? <ArrowForward style={{ transform: `rotate(90deg)` }} /> : <ArrowRight style={{ transform: `rotate(90deg)` }} />}</Button>
-                                        </BigBtnWrapper> : null
-                                    }
-                                    {/* <LinkButton label={'iOS'}/>
+        <InfoContainer lightBg={lightBg} id={id}>
+            <InfoWrapper>
+                <InfoRow imgStart={imgStart}>
+                    <Column1 imgStart={imgStart}>
+                        <TextWrapper>
+                            <TopLine>{topLine}</TopLine>
+                            <Heading lightText={lightText}>{headline}</Heading>
+                            <Subtitle darkText={darkText}>{description}</Subtitle>
+                            <ButtonsWrapper>
+                                {linkButton ?
+                                    <BigBtnWrapper>
+                                        <Button to={buttonLinkTo} smooth={true} duration={500} spy={true} exact='true' onMouseEnter={onHover} onMouseLeave={onHover
+                                        } primary="true" dark="true"
+                                        >{buttonLabel}{hover ? <ArrowForward style={{ transform: `rotate(90deg)` }} /> : <ArrowRight style={{ transform: `rotate(90deg)` }} />}</Button>
+                                    </BigBtnWrapper> : null
+                                }
+                                {/* <LinkButton label={'iOS'}/>
                                     <LinkButton label={'Android'}/> */}
-                                </ButtonsWrapper>
-                            </TextWrapper>
-                        </Column1>
-                        <Column2>
-                            <ImgWrap imgStart={imgStart}>
-                                <InfoSectionImg src={img} alt={alt} />
-                            </ImgWrap>
-                        </Column2>
-                    </InfoRow>
-                </InfoWrapper>
-            </InfoContainer>
-        </>
+                            </ButtonsWrapper>
+                        </TextWrapper>
+                    </Column1>
+                    <Column2>
+                        <ImgWrap imgStart={imgStart}>
+                            <InfoSectionImg src={img} alt={alt} />
+                        </ImgWrap>
+                    </Column2>
+                </InfoRow>
+            </InfoWrapper>
+        </InfoContainer>
     )
 }
 
