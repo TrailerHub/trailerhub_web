@@ -17,12 +17,12 @@ const Home = () => {
             <SideBar isOpen={isOpen} toggle={toggle} />
             <NavBar toggle={toggle} />
             <HeroSection />
-            <Cards />
-            {/* <div className='bg-shape'> <h1>blah</h1></div> */}
-            {/* <img src='/images/grey_shape.svg' alt='shape' className='bg-shape'></img> */}
+            <div className='bg-shape'>
+                <Cards />
                 <InfoSection {...secOne} />
                 <InfoSection {...secTwo} />
                 <InfoSection {...secThree} />
+            </div>
             <Footer />
         </>
     )

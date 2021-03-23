@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import {MdKeyboardArrowRight, MdArrowForward} from 'react-icons/md'
+import { MdKeyboardArrowRight, MdArrowForward } from 'react-icons/md'
 import { trailerHubBlack, trailerHubGreen } from '../../colors'
 
 export const InfoContainer = styled.div`
@@ -54,6 +54,10 @@ export const Column2 = styled.div`
 export const TextWrapper = styled.div`
     max-width: 580px;
     padding-bottom: 60px;
+
+    @media screen and (max-width: 260px) {
+        max-width: 320px;
+    }
 `;
 
 export const TopLine = styled.p`
@@ -68,13 +72,13 @@ export const TopLine = styled.p`
 
 export const Heading = styled.h1`
     margin-bottom: 24px;
-    font-size: 48px;
+    font-size: 3rem;
     line-height: 1.1;
     font-weight: 600;
     color: ${trailerHubBlack};
 
     @media screen and (max-width: 480px) {
-        font-size: 32px;
+        font-size: 2rem;
     }
 `;
 
@@ -103,9 +107,15 @@ export const ImgWrap = styled.div`
     }
 `;
 
-export const BigBtnWrapper = styled.div`
+export const ButtonsWrapper = styled.div`
     margin-top: 32px;
     display: flex;
+    align-items: center;
+`
+
+export const BigBtnWrapper = styled.div`
+    display: flex;
+    margin-right: 2rem;
 
     @media screen and (max-width: 620px) {
         justify-content: center;

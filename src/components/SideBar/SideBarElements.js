@@ -1,12 +1,11 @@
 import styled from 'styled-components'
-import { Link as LinkR } from 'react-router-dom'
 import { Link as LinkS } from 'react-scroll'
 import { FaTimes } from 'react-icons/fa'
-import { trailerHubBlack, trailerHubGradient, whiteWithLowOpacity } from '../../colors';
+import { trailerHubBlack, trailerHubGradient } from '../../colors';
 
 export const SideBarContainer = styled.aside`
     position: fixed;
-    z-index: 999; //no matter what itll always be on top
+    z-index: 999; 
     width: 100%;
     height: 100%;
     background: ${trailerHubGradient};
@@ -68,31 +67,5 @@ export const SideBarLink = styled(LinkS)`
     &:hover {
         color: ${trailerHubBlack};
         transition: 0.2s ease-in-out;
-    }
-`;
-
-export const SideBtnWrap = styled.div`
-    display: flex;
-    justify-content: center;
-`;
-
-export const SideBarRoute = styled(LinkR)`
-    border-radius: 15px;
-    background: ${whiteWithLowOpacity};
-    white-space: nowrap;
-    padding: 16px 64px;
-    color: #fff;
-    font-size: 16px;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    text-decoration: none;
-
-    &:hover {
-        transform: scale(1.05);
-        transition: all 0.2s ease-in-out;
-        background: #373737;
-        color: #fff;
     }
 `;

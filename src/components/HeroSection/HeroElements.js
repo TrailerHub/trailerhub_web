@@ -111,8 +111,22 @@ export const HeroP = styled.div`
     }
 `;
 
+export const ButtonsWrapper = styled.div`
+    margin-top: 32px;
+    display: grid;
+    grid-column-gap: 0;
+    align-items: center;
+    grid-template-columns: 1fr 0.5fr 0.5fr;
+    grid-gap: 0;
+
+    @media screen and (max-width: 900px) {
+        grid-template-columns: 1fr;
+        grid-row-gap: 10px;
+    }
+`
+
 export const HeroBtnWrapper = styled.div`
-    margin-top: 30px;
+    margin-right: 2rem;
 
     @media screen and (max-width: 480px) {
         margin-top: 15px;

@@ -25,8 +25,8 @@ const Footer = () => {
                 <ContentContainer>
                     <FooterSubHeading>Get in Touch</FooterSubHeading>
                     <FooterNoLink>(219) - 394 - 2933</FooterNoLink>
-                    <FooterNoLink>support@trailerhub.io</FooterNoLink>
                     <FooterNoLink>(219) - 394 - 2933</FooterNoLink>
+                    <FooterNoLink>support@trailerhub.io</FooterNoLink>
                     <FooterNoLink>support@trailerhub.io</FooterNoLink>
                 </ContentContainer>
             </FooterContainer>

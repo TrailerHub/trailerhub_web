@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { Link as LinkR } from 'react-router-dom'
 import { Link as LinkS } from 'react-scroll'
+import { trailerHubGreen } from '../../colors'
  
 export const Nav = styled.nav`
     background: ${({scrollNav}) => scrollNav ? 'rgba(255, 255, 255, 0.5)' : 'transparent'};
@@ -14,8 +15,6 @@ export const Nav = styled.nav`
     top: 0;
     z-index: 10;
     color: ${({scrollNav}) => scrollNav ? '#000' : '#fff'};
-    /* backdrop-filter: ${({scrollNav}) => scrollNav ? 'blur(5px)' : 'none'};
-    -webkit-backdrop-filter: ${({scrollNav}) => scrollNav ? 'blur(5px)' : 'none'};  */
 
     @media screen and (max-width: 960px) {
         transition: 0.8s all ease;
@@ -49,19 +48,24 @@ export const NavLogo = styled(LinkS)`
 
 export const LogoImage = styled.img`
     width: 100%;
-    @media screen and (max-width: 768px) {
-        width: 80%;
-    }
+    
     @media screen and (max-width: 1300px) {
         filter:  brightness(0) invert(1);
     }
+    @media screen and (max-width: 900px) {
+        filter: ${({scrollNav}) => scrollNav ? 'none' : 'brightness(0) invert(1)'};
+    }
+    @media screen and (max-width: 768px) {
+        width: 80%;
+    }
+    
 `
 
 export const MobileIcon = styled.div`
     display: none;
 
     @media screen and (max-width: 900px) {
-        filter:  brightness(0) invert(1);
+        filter: ${({scrollNav}) => scrollNav ? 'none' : 'brightness(0) invert(1)'};
         display: block;
         position: absolute;
         top: 0;
@@ -103,13 +107,20 @@ export const NavLinks = styled(LinkS)`
     padding-right: 30px;
 
     &.active {
-        border-bottom: 3px solid #48adf5;
+        border-bottom: 3px solid ${trailerHubGreen};
     }
 `;
 
-export const NavBtn = styled.nav`
+export const BtnDropDownWrapper = styled.div`
+    position: relative;
     display: flex;
     align-items: center;
+`
+
+export const NavBtn = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     @media screen and (max-width: 900px) {
         display: none;
@@ -132,7 +143,6 @@ export const NavBtnLink = styled(LinkR)`
     &:hover {
         transform: scale(1.05);
         transition: all 0.2s ease-in-out;
-        background: #373737;
-        color: #fff;
+        background: ${({scrollNav}) => scrollNav ? '#373737' : 'rgba(255, 255, 255, 0.4)'};
     }
 `;

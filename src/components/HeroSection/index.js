@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
-import { HeroContainer, Image, ImageContainer, HeroWrapper, HeroBg, HeroContent, HeroH1, HeroP, HeroBtnWrapper } from './HeroElements';
+import { HeroContainer, ButtonsWrapper, Image, ImageContainer, HeroWrapper, HeroBg, HeroContent, HeroH1, HeroP, HeroBtnWrapper } from './HeroElements';
 import { Button } from '../ButtonElements'
+import LinkButton from '../LinkButton';
 
 const HeroSection = () => {
     const [hover, setHover] = useState(false);
@@ -9,17 +10,20 @@ const HeroSection = () => {
     };
     return (
         <HeroContainer id="home">
-            <HeroBg src="/images/hero_shape.svg" alt="Shape"/>
+            <HeroBg src="/images/hero_shape.svg" alt="Shape" />
             <HeroWrapper>
                 <HeroContent>
                     <HeroH1>Rent trailers near you</HeroH1>
-                    <HeroP>Cheaper, faster, local trailers blah blah blah blah blah blah blah blah blah blah.
-                </HeroP>
-                    <HeroBtnWrapper>
-                        <Button to='about' smooth={true} duration={500} spy={true} exact='true' onMouseEnter={onHover} onMouseLeave={onHover
-                        } primary="true" dark="true"
-                        >Learn More </Button>
-                    </HeroBtnWrapper>
+                    <HeroP>Choose the trailer thats right for your needs from local hosts.</HeroP>
+                    <ButtonsWrapper>
+                        <HeroBtnWrapper>
+                            <Button to='about' smooth={true} duration={500} spy={true} exact='true' onMouseEnter={onHover} onMouseLeave={onHover
+                            } primary="true" dark="true"
+                            >Learn More </Button>
+                        </HeroBtnWrapper>
+                        <LinkButton label={'iOS'} />
+                        <LinkButton label={'Android'} />
+                    </ButtonsWrapper>
                 </HeroContent>
                 <ImageContainer><Image src="/images/trailerhub1.svg" alt="TrailerHub Search Screen" /></ImageContainer>
             </HeroWrapper>
