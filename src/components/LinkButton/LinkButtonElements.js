@@ -27,8 +27,13 @@ export const LinkText = styled.a`
     text-decoration: none;
     height: 100%;
     cursor: pointer;
+    color: ${trailerHubGreen};
     font-weight: 400;
     padding-right: 20px;
+
+    &:hover {
+        color: ${trailerHubBlack};
+    }
 `;
 
 export const ArrowForward = styled(MdArrowForward)`

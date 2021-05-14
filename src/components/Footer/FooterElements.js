@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { Link as LinkS } from 'react-scroll'
+import { Link as LinkR } from 'react-router-dom'
 import { trailerHubBlack, trailerHubGreen, trailerHubGrey } from '../../colors'
 
 export const FooterWrapper = styled.div`
@@ -26,10 +27,20 @@ export const ContentContainer = styled.div`
     grid-template-columns: 1fr;
     padding: 0 24px;
     grid-gap: 0;
+    align-items: flex-start;
+    justify-content: start;
 
     @media screen and (max-width: 480px) {
         padding: 0;
     }
+`
+
+export const ContactContentContainer = styled.div`
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 0;
+    align-items: flex-start;
+    justify-content: start;
 `
 
 export const FooterLink = styled(LinkS)`
@@ -74,6 +85,24 @@ export const FooterNoLink = styled.p`
         font-size: 0.7rem;
     }
 `;
+
+export const CopyTermsPolicyContainer = styled.div`
+    display: flex;
+`
+
+export const CopyTermsLink = styled(LinkR)`
+    color: ${trailerHubGreen};
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+    font-size: 0.7rem;
+    padding: 10px;
+    align-self: flex-end;
+
+    &:hover {
+        color: ${trailerHubBlack};
+        transition: 0.3s ease-out;
+    }
+`
 
 export const CopyRightText = styled.p`
     color: #afafaf;

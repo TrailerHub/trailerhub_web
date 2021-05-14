@@ -20,7 +20,7 @@ const Cards = () => {
                 <CardsCard to='business' smooth={true} duration={500} spy={true} exact='true'>
                     <CardsIcon src="/images/business.svg" alt="space"/>
                     <CardsH2>Business</CardsH2>
-                    <CardsP>Make your trailers available to a wider audience</CardsP>
+                    <CardsP>Make your trailers available to a larger market</CardsP>
                 </CardsCard>
             </CardsWrapper>
         </CardsContainer>

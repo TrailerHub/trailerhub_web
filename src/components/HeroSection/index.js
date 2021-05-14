@@ -14,15 +14,15 @@ const HeroSection = () => {
             <HeroWrapper>
                 <HeroContent>
                     <HeroH1>Rent trailers near you</HeroH1>
-                    <HeroP>Choose the trailer thats right for your needs from local hosts.</HeroP>
+                    <HeroP>Choose the trailer thats right for you from local hosts and instantly book it.</HeroP>
                     <ButtonsWrapper>
                         <HeroBtnWrapper>
                             <Button to='about' smooth={true} duration={500} spy={true} exact='true' onMouseEnter={onHover} onMouseLeave={onHover
                             } primary="true" dark="true"
                             >Learn More </Button>
                         </HeroBtnWrapper>
-                        {/* <LinkButton label={'iOS'} dark={true}/>
-                        <LinkButton label={'Android'} dark={true}/> */}
+                        <LinkButton label={'iOS'} dark={true} href={'https://apps.apple.com/us/app/trailerhub-rent-trailers/id1551725129'}/>
+                        <LinkButton label={'Android'} dark={true} href={'https://play.google.com/store/apps/details?id=io.trailerhub.trailerhub'}/>
                     </ButtonsWrapper>
                 </HeroContent>
                 <ImageContainer><Image src="/images/trailerhub_search_page.png" alt="TrailerHub Search Screen" /></ImageContainer>

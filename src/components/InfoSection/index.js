@@ -18,15 +18,15 @@ const InfoSection = ({ lightBg, id, imgStart, topLine, lightText, headline, dark
                             <Heading lightText={lightText}>{headline}</Heading>
                             <Subtitle darkText={darkText}>{description}</Subtitle>
                             <ButtonsWrapper>
-                                {linkButton ?
+                                {linkButton &&
                                     <BigBtnWrapper>
                                         <Button to={buttonLinkTo} smooth={true} duration={500} spy={true} exact='true' onMouseEnter={onHover} onMouseLeave={onHover
                                         } primary="true" dark="true"
                                         >{buttonLabel}{hover ? <ArrowForward style={{ transform: `rotate(90deg)` }} /> : <ArrowRight style={{ transform: `rotate(90deg)` }} />}</Button>
-                                    </BigBtnWrapper> : null
+                                    </BigBtnWrapper>
                                 }
-                                {/* <LinkButton label={'iOS'}/>
-                                    <LinkButton label={'Android'}/> */}
+                                <LinkButton label={'iOS'} dark={true} href={'https://apps.apple.com/us/app/trailerhub-rent-trailers/id1551725129'} />
+                                <LinkButton label={'Android'} dark={true} href={'https://play.google.com/store/apps/details?id=io.trailerhub.trailerhub'} />
                             </ButtonsWrapper>
                         </TextWrapper>
                     </Column1>

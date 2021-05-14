@@ -6,14 +6,11 @@ const DropDown = ({ isActive }) => {
             <DropDownWrapper>
                 <ContentWrapper>
                     <TitleH1>Support</TitleH1>
-                    <BodyP>(210) - 383 - 7022</BodyP>
-                    <BodyP>(210) - 251 - 6672</BodyP>
+                    <BodyP>(888) - 777 - 9423</BodyP>
                     <BodyP>support@trailerhub.io</BodyP>
                     <TitleH1>Business</TitleH1>
-                    <BodyP>(210) - 383 - 7022</BodyP>
                     <BodyP>(210) - 251 - 6672</BodyP>
-                    <BodyP>zoe@trailerhub.io</BodyP>
-                    <BodyP>r.schmitt@trailerhub.io</BodyP>
+                    <BodyP>prod@trailerhub.io</BodyP>
                 </ContentWrapper>
             </DropDownWrapper>
         </DropDownContainer>

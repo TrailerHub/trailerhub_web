@@ -1,5 +1,5 @@
 import React from 'react'
-import { FooterContainer, FooterWrapper, LogoContainer, ContentContainer, CopyRightText, FooterNoLink, FooterLink, LogoImage, FooterSubHeading } from './FooterElements'
+import { FooterContainer, ContactContentContainer, FooterWrapper, LogoContainer, ContentContainer, CopyRightText, FooterNoLink, FooterLink, LogoImage, FooterSubHeading, CopyTermsPolicyContainer, CopyTermsLink } from './FooterElements'
 import { animateScroll as scroll } from 'react-scroll';
 
 const Footer = () => {
@@ -13,7 +13,11 @@ const Footer = () => {
                     <LogoContainer to='/' onClick={toggleHome}>
                         <LogoImage src="/images/logo_title.svg" alt="TrailerHub Logo" />
                     </LogoContainer>
-                    <CopyRightText>TrailerHub, Inc.</CopyRightText>
+                    <CopyTermsPolicyContainer>
+                        <CopyRightText>{String.fromCharCode(169)} TrailerHub, Inc.</CopyRightText>
+                        <CopyTermsLink to='/termsofservicedoc.html' target="_blank">Terms of Service</CopyTermsLink>
+                        <CopyTermsLink to='/privacypolicydoc.html' target="_blank">Privacy Policy</CopyTermsLink>
+                    </CopyTermsPolicyContainer>
                 </ContentContainer>
                 <ContentContainer>
                     <FooterSubHeading>Company</FooterSubHeading>
@@ -23,11 +27,11 @@ const Footer = () => {
                     <FooterLink to="business" smooth={true} duration={500} spy={true} exact='true'>Business</FooterLink>
                 </ContentContainer>
                 <ContentContainer>
-                    <FooterSubHeading>Get in Touch</FooterSubHeading>
-                    <FooterNoLink>(219) - 394 - 2933</FooterNoLink>
-                    <FooterNoLink>(219) - 394 - 2933</FooterNoLink>
-                    <FooterNoLink>support@trailerhub.io</FooterNoLink>
-                    <FooterNoLink>support@trailerhub.io</FooterNoLink>
+                    <ContactContentContainer>
+                        <FooterSubHeading>Get in Touch</FooterSubHeading>
+                        <FooterNoLink>(888) - 777 - 9423</FooterNoLink>
+                        <FooterNoLink>support@trailerhub.io</FooterNoLink>
+                    </ContactContentContainer>
                 </ContentContainer>
             </FooterContainer>
         </FooterWrapper>
