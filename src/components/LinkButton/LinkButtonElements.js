@@ -8,15 +8,10 @@ export const LinkButtonContainer = styled.div`
     justify-content: left;
     padding: 0 1rem 0 0;
     font-size: 1.1rem;
-    color: ${trailerHubGreen};
     transition: all 0.2s ease-in-out;
+    color: ${({black}) => (black ? trailerHubBlack : trailerHubGreen)};
 
-    &:hover {
-        color: ${trailerHubBlack};
-    }
-
-    @media screen and (max-width: 900px) {
-        color: ${({dark}) => (dark ? `${trailerHubBlack}` : `${trailerHubGreen}`)};
+    @media screen and (max-width: 768px) {
         justify-content: center;
     }
 `
@@ -27,15 +22,11 @@ export const LinkText = styled.a`
     text-decoration: none;
     height: 100%;
     cursor: pointer;
-    color: ${trailerHubGreen};
+    color: ${({black}) => (black ? trailerHubBlack : trailerHubGreen)};
     font-weight: 400;
     padding-right: 20px;
-
-    &:hover {
-        color: ${trailerHubBlack};
-    }
 `;
 
 export const ArrowForward = styled(MdArrowForward)`
-    
+    color: ${({black}) => (black ? trailerHubBlack : trailerHubGreen)};
 `;

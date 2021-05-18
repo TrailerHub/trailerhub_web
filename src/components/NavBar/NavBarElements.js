@@ -48,7 +48,7 @@ export const NavLogo = styled(LinkS)`
 export const LogoImage = styled.img`
     width: 100%;
     
-    @media screen and (max-width: 1300px) {
+    @media screen and (max-width: 1100px) {
         filter:  brightness(0) invert(1);
     }
     @media screen and (max-width: 900px) {

@@ -1,5 +1,5 @@
 import React from 'react'
-import { FooterContainer, ContactContentContainer, FooterWrapper, LogoContainer, ContentContainer, CopyRightText, FooterNoLink, FooterLink, LogoImage, FooterSubHeading, CopyTermsPolicyContainer, CopyTermsLink } from './FooterElements'
+import { FooterContainer, FlexWrap, ContactContentContainer, FooterWrapper, LogoContainer, ContentContainer, CopyRightText, FooterNoLink, FooterLink, LogoImage, FooterSubHeading, CopyTermsPolicyContainer, CopyTermsLink } from './FooterElements'
 import { animateScroll as scroll } from 'react-scroll';
 
 const Footer = () => {
@@ -10,9 +10,11 @@ const Footer = () => {
         <FooterWrapper>
             <FooterContainer>
                 <ContentContainer>
-                    <LogoContainer to='/' onClick={toggleHome}>
-                        <LogoImage src="/images/logo_title.svg" alt="TrailerHub Logo" />
-                    </LogoContainer>
+                    <FlexWrap>
+                        <LogoContainer to='/' onClick={toggleHome}>
+                            <LogoImage src="/images/logo_title.svg" alt="TrailerHub Logo" />
+                        </LogoContainer>
+                    </FlexWrap>
                     <CopyTermsPolicyContainer>
                         <CopyRightText>{String.fromCharCode(169)} TrailerHub, Inc.</CopyRightText>
                         <CopyTermsLink to='/termsofservicedoc.html' target="_blank">Terms of Service</CopyTermsLink>

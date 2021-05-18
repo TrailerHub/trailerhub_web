@@ -11,6 +11,7 @@ const Cards = () => {
                     <CardsIcon src="/images/rent.svg" alt="space"/>
                     <CardsH2>Renting</CardsH2>
                     <CardsP>Search for and book trailers</CardsP>
+                    <CardsP><br/></CardsP>
                 </CardsCard>
                 <CardsCard to='host' smooth={true} duration={500} spy={true} exact='true'>
                     <CardsIcon src="/images/host.svg" alt="space"/>

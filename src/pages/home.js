@@ -13,7 +13,7 @@ const Home = () => {
         setIsOpen(!isOpen)
     }
     return (
-        <>
+        <div>
             <SideBar isOpen={isOpen} toggle={toggle} />
             <NavBar toggle={toggle} />
             <HeroSection />
@@ -24,7 +24,7 @@ const Home = () => {
                 <InfoSection {...secThree} />
             </div>
             <Footer />
-        </>
+        </div>
     )
 }
 

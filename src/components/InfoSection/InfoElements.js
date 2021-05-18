@@ -57,6 +57,7 @@ export const TextWrapper = styled.div`
 
     @media screen and (max-width: 260px) {
         max-width: 320px;
+        text-align: center;
     }
 `;
 
@@ -77,8 +78,13 @@ export const Heading = styled.h1`
     font-weight: 600;
     color: ${trailerHubBlack};
 
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 1200px) {
+        font-size: 2.3rem;
+    }
+
+    @media screen and (max-width: 620px) {
         font-size: 2rem;
+        text-align: center;
     }
 `;
 
@@ -109,8 +115,15 @@ export const ImgWrap = styled.div`
 `;
 
 export const InfoSectionImg = styled.img`
-   
     width: 60%;
+
+    @media screen and (max-width: 1200px) {
+        width: 100%;
+    }
+
+    @media screen and (max-width: 620px) {
+        width: 50%;
+    }
 `
 
 export const ButtonsWrapper = styled.div`

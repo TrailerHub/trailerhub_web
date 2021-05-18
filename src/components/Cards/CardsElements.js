@@ -7,14 +7,14 @@ export const CardsContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 150px 0;
+    padding: 150px 10px;
 
     @media screen and (max-width: 768px) {
-        padding: 60px 0;
+        padding: 60px 10px;
     }
 
     @media screen and (max-width: 480px) {
-        padding: 40px 0;
+        padding: 40px 10px;
     }
 `;
 
@@ -44,7 +44,7 @@ export const CardsCard = styled(LinkS)`
     justify-content: flex-start;
     align-items: center;
     border-radius: 16px;
-    max-height: 340px;
+    //max-height: 340px;
     padding: 40px;
     box-shadow: 0 15px 30px rgba(0,0,0,0.1);
 
