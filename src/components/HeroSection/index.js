@@ -14,11 +14,11 @@ const HeroSection = () => {
             <HeroWrapper>
                 <HeroContent>
                     <HeroH1>Rent trailers near you</HeroH1>
-                    <HeroP>Choose the trailer thats right for you from local hosts and instantly book it.</HeroP>
+                    <HeroP title="TrailerHub">Join our growing peer-to-peer trailer sharing community on your mobile device to find and rent trailers near you.</HeroP>
                     <ButtonsWrapper>
                         <HeroBtnWrapper>
                             <Button to='about' smooth={true} duration={500} spy={true} exact='true' onMouseEnter={onHover} onMouseLeave={onHover
-                            } primary="true" dark="true"
+                            } primary="true" dark="true" offset={60}
                             >Learn More 
                             {hover ? <ArrowForward style={{ transform: `rotate(90deg)` }} /> : <ArrowRight style={{ transform: `rotate(90deg)` }} />}</Button>
                         </HeroBtnWrapper>

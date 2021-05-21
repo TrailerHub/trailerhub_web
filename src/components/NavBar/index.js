@@ -27,22 +27,22 @@ const NavBar = ({ toggle }) => {
         <>
             <Nav scrollNav={scrollNav} >
                 <NavBarContainer>
-                    <NavLogo to='/' onClick={toggleHome} ><LogoImage src="/images/logo_title.svg" alt="TrailerHub Logo" scrollNav={scrollNav} /></NavLogo>
+                    <NavLogo to='/' onClick={toggleHome} title="TrailerHub"><LogoImage src="/images/logo_title.svg" alt="TrailerHub Logo" scrollNav={scrollNav} title="TrailerHub"/></NavLogo>
                     <MobileIcon onClick={toggle} scrollNav={scrollNav}>
-                        <FiMenu />
+                        <FiMenu type="button" aria-label="open menu" aria-haspopup="true"/>
                     </MobileIcon>
                     <NavMenu>
                         <NavItem>
-                            <NavLinks to="about" smooth={true} duration={500} spy={true} exact='true' offset={-80}>About</NavLinks>
+                            <NavLinks to="about" smooth={true} duration={500} spy={true} exact='true' offset={60} scrollNav={scrollNav}>About</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to="rent" smooth={true} duration={500} spy={true} exact='true' offset={-80}>Rent</NavLinks>
+                            <NavLinks to="rent" smooth={true} duration={500} spy={true} exact='true' offset={60} scrollNav={scrollNav}>Rent</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to="host" smooth={true} duration={500} spy={true} exact='true' offset={-80}>Host</NavLinks>
+                            <NavLinks to="host" smooth={true} duration={500} spy={true} exact='true' offset={60} scrollNav={scrollNav}>Host</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to="business" smooth={true} duration={500} spy={true} exact='true' offset={-80}>Business</NavLinks>
+                            <NavLinks to="business" smooth={true} duration={500} spy={true} exact='true' offset={60} scrollNav={scrollNav}>Business</NavLinks>
                         </NavItem>
                     </NavMenu>
                     <BtnDropDownWrapper ref={dropdownRef}>

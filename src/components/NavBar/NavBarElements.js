@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { Link as LinkS } from 'react-scroll'
-import { trailerHubGreen } from '../../colors'
+import { trailerHubBlack, trailerHubGreen } from '../../colors'
  
 export const Nav = styled.nav`
     background: ${({scrollNav}) => scrollNav ? 'rgba(255, 255, 255, 0.5)' : 'transparent'};
@@ -94,7 +94,7 @@ export const NavItem = styled.li`
 `;
 
 export const NavLinks = styled(LinkS)`
-    /* color: #fff; */
+    color: ${({scrollNav}) => scrollNav ? trailerHubBlack : '#fff'};
     display: flex;
     align-items: center;
     text-decoration: none;
