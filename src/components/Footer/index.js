@@ -2,12 +2,12 @@ import React from 'react'
 import { FooterContainer, FlexWrap, ContactContentContainer, FooterWrapper, LogoContainer, ContentContainer, CopyRightText, FooterNoLink, FooterLink, LogoImage, FooterSubHeading, CopyTermsPolicyContainer, CopyTermsLink } from './FooterElements'
 import { animateScroll as scroll } from 'react-scroll';
 
-const Footer = () => {
+const Footer = ({path}) => {
     const toggleHome = () => {
         scroll.scrollToTop();
     };
     return (
-        <FooterWrapper>
+        <FooterWrapper path={path}>
             <FooterContainer>
                 <ContentContainer>
                     <FlexWrap>
@@ -23,15 +23,13 @@ const Footer = () => {
                 </ContentContainer>
                 <ContentContainer>
                     <FooterSubHeading>Company</FooterSubHeading>
-                    <FooterLink to="about" smooth={true} duration={500} spy={true} exact='true'>About</FooterLink>
-                    <FooterLink to="rent" smooth={true} duration={500} spy={true} exact='true'>Rent</FooterLink>
-                    <FooterLink to="host" smooth={true} duration={500} spy={true} exact='true'>Host</FooterLink>
-                    <FooterLink to="business" smooth={true} duration={500} spy={true} exact='true'>Business</FooterLink>
+                    <FooterLink to="/" smooth={true} duration={500} spy={true} exact='true' onClick={() => toggleHome()}>About</FooterLink>
+                    <FooterLink to="/howitworks" smooth={true} duration={500} spy={true} exact='true' onClick={() => toggleHome()}>How it works</FooterLink>
                 </ContentContainer>
                 <ContentContainer>
                     <ContactContentContainer>
                         <FooterSubHeading>Get in Touch</FooterSubHeading>
-                        <FooterNoLink>(888) - 777 - 9423</FooterNoLink>
+                        <FooterLink href="tel:+18887779423">(888) - 777 - 9423</FooterLink>
                         <FooterNoLink>support@trailerhub.io</FooterNoLink>
                     </ContactContentContainer>
                 </ContentContainer>

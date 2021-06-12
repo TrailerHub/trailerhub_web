@@ -14,7 +14,7 @@ const HeroSection = () => {
             <HeroWrapper>
                 <HeroContent>
                     <HeroH1>Rent trailers near you</HeroH1>
-                    <HeroP title="TrailerHub">Join our growing peer-to-peer trailer sharing community on your mobile device to find and rent trailers near you.</HeroP>
+                    <HeroP title="TrailerHub">Join our growing peer-to-peer trailer sharing platform on your mobile device to find and rent trailers in your community.</HeroP>
                     <ButtonsWrapper>
                         <HeroBtnWrapper>
                             <Button to='about' smooth={true} duration={500} spy={true} exact='true' onMouseEnter={onHover} onMouseLeave={onHover

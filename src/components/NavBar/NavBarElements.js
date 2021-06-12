@@ -1,31 +1,19 @@
 import styled from 'styled-components'
-import { Link as LinkS } from 'react-scroll'
-import { trailerHubBlack, trailerHubGreen } from '../../colors'
- 
+import { Link as LinkR } from 'react-router-dom'
+import { trailerHubBlack } from '../../colors'
+
 export const Nav = styled.nav`
-    background: ${({scrollNav}) => scrollNav ? 'rgba(255, 255, 255, 0.5)' : 'transparent'};
+    background: ${({ scrollNav }) => scrollNav ? 'rgba(255, 255, 255, 0.5)' : 'transparent'};
     height: 80px;
     margin-top: -80px;
-    display: flex;
+    display: ${({ path }) => (path === '/privacypolicydoc.html' || path === '/termsofservicedoc.html') ? 'none' : 'flex'};;
     justify-content: center;
     align-items: center;
     font-size: 1.15rem;
     position: sticky;
     top: 0;
     z-index: 10;
-    color: ${({scrollNav}) => scrollNav ? '#000' : '#fff'};
-
-    @media screen and (max-width: 960px) {
-        transition: 0.8s all ease;
-    }
-`;
-
-export const NavBarContainer = styled.div`
-    display: flex;
-    justify-content: space-between;
-    height: 80px;
-    z-index: 1;
-    width: 100%;
+    color: ${({ scrollNav }) => scrollNav ? '#000' : '#fff'};
     padding: 0 140px;
 
     @media screen and (max-width: 768px) {
@@ -35,10 +23,25 @@ export const NavBarContainer = styled.div`
     @media screen and (max-width: 480px) {
         padding: 0 20px;
     }
+
+    @media screen and (max-width: 960px) {
+        transition: 0.8s all ease;
+    }
 `;
 
-export const NavLogo = styled(LinkS)`
-    justify-self: flex-start;
+export const NavBarContainer = styled.div`
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+`;
+
+export const NavLogo = styled(LinkR)`
+    position: absolute;
+    left: 0;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -47,12 +50,14 @@ export const NavLogo = styled(LinkS)`
 
 export const LogoImage = styled.img`
     width: 100%;
+    filter: ${({ location }) => location ? 'brightness(0) invert(1)' : 'none'};
+    filter: ${({ scrollNav }) => scrollNav && 'none'};
     
     @media screen and (max-width: 1100px) {
         filter:  brightness(0) invert(1);
     }
     @media screen and (max-width: 900px) {
-        filter: ${({scrollNav}) => scrollNav ? 'none' : 'brightness(0) invert(1)'};
+        filter: ${({ scrollNav }) => scrollNav ? 'none' : 'brightness(0) invert(1)'};
     }
     @media screen and (max-width: 768px) {
         width: 80%;
@@ -64,7 +69,7 @@ export const MobileIcon = styled.div`
     display: none;
 
     @media screen and (max-width: 900px) {
-        filter: ${({scrollNav}) => scrollNav ? 'none' : 'brightness(0) invert(1)'};
+        filter: ${({ scrollNav }) => scrollNav ? 'none' : 'brightness(0) invert(1)'};
         display: block;
         position: absolute;
         top: 0;
@@ -76,11 +81,14 @@ export const MobileIcon = styled.div`
 `;
 
 export const NavMenu = styled.ul`
+    position: absolute;
     display: flex;
     align-items: center;
+    justify-content: center;
     list-style: none;
     text-align: center;
-    margin-right: -22px;
+    left: 0;
+    right: 0;
 
     @media screen and (max-width: 900px) {
         display: none;
@@ -93,21 +101,16 @@ export const NavItem = styled.li`
     height: 80px;
 `;
 
-export const NavLinks = styled(LinkS)`
-    color: ${({scrollNav}) => scrollNav ? trailerHubBlack : '#fff'};
+export const NavLinks = styled(LinkR)`
+    color: ${({ scrollNav }) => scrollNav ? trailerHubBlack : '#fff'};
     display: flex;
     align-items: center;
     text-decoration: none;
-    //font-size: 1.1rem;
     padding: 0 1rem;
     height: 100%;
     cursor: pointer;
     font-weight: 400;
     padding-right: 30px;
-
-    &.active {
-        border-bottom: 3px solid ${trailerHubGreen};
-    }
 `;
 
 export const BtnDropDownWrapper = styled.div`
@@ -117,6 +120,8 @@ export const BtnDropDownWrapper = styled.div`
 `
 
 export const NavBtn = styled.div`
+    position: absolute;
+    right: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -128,7 +133,7 @@ export const NavBtn = styled.div`
 
 export const NavBtnLink = styled.button`
     border-radius: 12px;
-    background: ${({scrollNav}) => scrollNav ? '#373737' : 'rgba(255, 255, 255, 0.3)'};
+    background: ${({ scrollNav }) => scrollNav ? '#373737' : 'rgba(255, 255, 255, 0.3)'};
     white-space: nowrap;
     padding: 10px 22px;
     color: #fff;
@@ -142,6 +147,6 @@ export const NavBtnLink = styled.button`
     &:hover {
         transform: scale(1.05);
         transition: all 0.2s ease-in-out;
-        background: ${({scrollNav}) => scrollNav ? '#373737' : 'rgba(255, 255, 255, 0.4)'};
+        background: #373737;
     }
 `;

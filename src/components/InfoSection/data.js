@@ -14,8 +14,9 @@ export const secOne = {
     dark: true,
     primary: true, 
     darkText: false ,
-    linkButton: true,
-    buttonLinkTo: 'host'
+    linkButton: false,
+    buttonLinkTo: 'host',
+    appLinks: true,
 }
 
 export const secTwo = {
@@ -33,8 +34,9 @@ export const secTwo = {
     dark: false,
     primary: true,
     darkText: true,
-    linkButton: true,
-    buttonLinkTo: 'business'
+    linkButton: false,
+    buttonLinkTo: 'business',
+    appLinks: true,
 }
 
 export const secThree = {
@@ -51,5 +53,6 @@ export const secThree = {
     alt: 'TrailerHub Rental Record',
     dark: true,
     primary: true,
-    darkText: false
+    darkText: false,
+    appLinks: true,
 }

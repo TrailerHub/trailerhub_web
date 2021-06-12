@@ -9,10 +9,17 @@ export const InfoContainer = styled.div`
 
 export const InfoWrapper = styled.div`
     display: flex;
-    z-index: 1;
     width: 100%;
     padding: 150px 150px;
     justify-content: center;
+
+    @media screen and (max-width: 2000px) {
+        padding: 180px 200px;
+    }
+
+    @media screen and (max-width: 1200px) {
+        padding: 150px 150px;
+    }
 
     @media screen and (max-width: 768px) {
         padding: 90px 20px;
@@ -34,7 +41,7 @@ export const InfoRow = styled.div`
         grid-template-areas: ${({ imgStart }) => (imgStart ? `'col1 col2'` : `'col1 col2' 'col2 col1'`)};
     }
 
-    @media screen and (max-width: 620px) {
+    @media screen and (max-width: 800px) {
         text-align: center;
         justify-content: center;
         grid-template-areas: 'col1' 'col2';
@@ -45,6 +52,11 @@ export const Column1 = styled.div`
     display: flex;
     justify-content: ${({ imgStart }) => (imgStart ? 'flex-end' : 'flex-start')};
     grid-area: col1;
+
+    @media screen and (max-width: 800px) {
+        text-align: center;
+        justify-content: center;
+    }
 `;
 
 export const Column2 = styled.div`
@@ -54,6 +66,10 @@ export const Column2 = styled.div`
 export const TextWrapper = styled.div`
     max-width: 580px;
     padding-bottom: 60px;
+
+    @media screen and (max-width: 800px) {
+        text-align: center;
+    }
 
     @media screen and (max-width: 260px) {
         max-width: 320px;
@@ -82,7 +98,7 @@ export const Heading = styled.h1`
         font-size: 2.3rem;
     }
 
-    @media screen and (max-width: 620px) {
+    @media screen and (max-width: 800px) {
         font-size: 2rem;
         text-align: center;
     }
@@ -108,20 +124,20 @@ export const ImgWrap = styled.div`
     //justify-content: center;
     padding:  0 50px;
 
-    @media screen and (max-width: 620px) {
+    @media screen and (max-width: 800px) {
         align-items: center;
         padding:  0;
     }
 `;
 
 export const InfoSectionImg = styled.img`
-    width: 60%;
+    width: 45%;
 
-    @media screen and (max-width: 1200px) {
-        width: 100%;
+    @media screen and (max-width: 1440px) {
+        width: 60%;
     }
 
-    @media screen and (max-width: 620px) {
+    @media screen and (max-width: 800px) {
         width: 50%;
     }
 `
@@ -148,7 +164,7 @@ export const BigBtnWrapper = styled.div`
     display: flex;
     margin-right: 2rem;
 
-    @media screen and (max-width: 620px) {
+    @media screen and (max-width: 800px) {
         justify-content: center;
     }
 

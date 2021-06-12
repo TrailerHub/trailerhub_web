@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { Link as LinkS } from 'react-scroll'
 import { Link as LinkR } from 'react-router-dom'
 import { trailerHubBlack, trailerHubGreen, trailerHubGrey } from '../../colors'
 
@@ -19,7 +18,7 @@ export const FooterContainer = styled.footer`
     }
 `;
 
-export const LogoContainer = styled(LinkS)`
+export const LogoContainer = styled(LinkR)`
     display: flex;
     align-items: flex-start;
     text-decoration: none;
@@ -71,7 +70,7 @@ export const ContactContentContainer = styled.div`
     }
 `
 
-export const FooterLink = styled(LinkS)`
+export const FooterLink = styled(LinkR)`
     color: #afafaf;
     text-decoration: none;
     margin-bottom: 0.5rem;

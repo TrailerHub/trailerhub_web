@@ -11,7 +11,7 @@ export const LinkButtonContainer = styled.div`
     transition: all 0.2s ease-in-out;
     color: ${({black}) => (black ? trailerHubBlack : trailerHubGreen)};
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 800px) {
         justify-content: center;
     }
 `

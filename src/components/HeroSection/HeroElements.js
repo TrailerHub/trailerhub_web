@@ -44,12 +44,12 @@ export const HeroWrapper = styled.div`
     align-items: center;
     justify-content: space-between;
 
-    @media screen and (max-width: 768px) {
-        padding: 0 20px 0 50px;
+    @media screen and (max-width: 2000px) {
+        padding: 0 90px 0 200px;
     }
 
-    @media screen and (max-width: 480px) {
-        padding: 0 20px 0 20px;
+    @media screen and (max-width: 800px) {
+        padding: 0 20px;
         grid-template-columns: 1fr;
     }
 `
@@ -61,10 +61,16 @@ export const ImageContainer = styled.div`
 `
 
 export const Image = styled.img`
-    width: 40%;
+    width: 30%;
 
+    @media screen and (max-width: 1440px) {
+        width: 40%;
+    }
     @media screen and (max-width: 1200px) {
         width: 50%;
+    }
+    @media screen and (max-width: 800px) {
+        width: 30%;
     }
 `
 
@@ -79,7 +85,7 @@ export const HeroContent = styled.div`
         padding: 8px 50px 8px 0;
     }
 
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 800px) {
         padding: 100px 20px 50px;
         align-items: center;
     }
@@ -95,7 +101,7 @@ export const HeroH1 = styled.div`
         font-size: 2rem;
     }
 
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 800px) {
         text-align: center;
     }
 `;
@@ -109,11 +115,11 @@ export const HeroP = styled.div`
     text-align: left;
     max-width: 600px;
 
-    @media screen and (max-width: 768px) {
+    /* @media screen and (max-width: 768px) {
         font-size: 1rem;
-    }
+    } */
 
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 800px) {
         text-align: center;
         line-height: 1.5rem;
     }
