@@ -6,6 +6,7 @@ export const Container = styled.div`
     justify-content: center;
     text-align: center;
     padding: 130px 100px;
+    background: linear-gradient(104.2deg, #54AEF0 -26.26%, #60E783 123.52%);
 `;
 
 export const FAQContainer = styled.div`
@@ -78,7 +79,7 @@ export const SubText = styled.p`
 
 export const FAQCardContainer = styled.div`
     margin: 0 0 10px 0; 
-    background: #F6F8FA;
+    background: #fff;
     border-radius: 15px;
     padding: 20px;
     cursor: pointer;

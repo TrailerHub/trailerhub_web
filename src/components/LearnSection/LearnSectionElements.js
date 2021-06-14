@@ -5,7 +5,12 @@ export const Container = styled.div`
     display: flex;
     justify-content: center;
     text-align: center;
-    padding: 130px 100px;
+    padding: 150px;
+    width: 100%;
+
+    @media screen and (max-width: 800px) {
+        padding: 150px 50px;
+    }
 `;
 
 export const Heading = styled.h1`
@@ -19,7 +24,7 @@ export const Heading = styled.h1`
         font-size: 2.3rem;
     }
 
-    @media screen and (max-width: 1150px) {
+    @media screen and (max-width: 1300px) {
         color:  ${trailerHubBlack};
     }
 
@@ -35,7 +40,7 @@ export const SubHeading = styled.h2`
     font-weight: 300;
     color: #fff;
 
-    @media screen and (max-width: 1150px) {
+    @media screen and (max-width: 1300px) {
         color:  ${trailerHubBlack};
     }
 
@@ -54,3 +59,21 @@ export const SubText = styled.p`
         line-height: 20px;
     }
 `;
+
+export const Grid = styled.div`
+    display: grid;
+    width: 100%;
+    justify-content: space-between;
+    align-content: center;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 50px;
+
+    @media screen and (max-width: 1300px) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media screen and (max-width: 900px) {
+        grid-template-columns: 1fr;
+    }
+`

@@ -51,7 +51,7 @@ export const NavLogo = styled(LinkR)`
 
 export const LogoImage = styled.img`
     width: 100%;
-    filter: ${({ location }) => location === '/howitworks' || location === '/faq'? 'brightness(0) invert(1)' : 'none'};
+    filter: ${({ location }) => location === '/howitworks' || location === '/faq' || location === '/learn' ? 'brightness(0) invert(1)' : 'none'};
     filter: ${({ scrollNav }) => scrollNav && 'none'};
     
     @media screen and (max-width: 1100px) {
@@ -123,7 +123,7 @@ export const BtnDropDownWrapper = styled.div`
 export const NavBtn = styled.div`
     position: absolute;
     right: 0;
-    display: flex;
+    display: ${({ location }) => location === '/faq' ? 'none' : 'flex'};
     align-items: center;
     justify-content: center;
 

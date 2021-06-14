@@ -2,7 +2,7 @@ import FAQSection from "../components/FAQSection"
 
 const FAQ = () => {
     return (
-        <div className="header-shape"> 
+        <div> 
             <FAQSection />
         </div>
     )

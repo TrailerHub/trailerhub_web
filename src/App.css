@@ -32,15 +32,6 @@
     width: 100%;
   }
 
-  .header-shape2 {
-    background: url('images/header_shape2.svg') no-repeat top center ;
-    -webkit-background-size: contain;
-    -moz-background-size: contain;
-    -o-background-size: contain;
-    background-size: contain;
-    width: 100%;
-  }
-
   .bg-gradient {
     background: linear-gradient(104.2deg, #54AEF0 -26.26%, #60E783 123.52%);
     width: 100%;

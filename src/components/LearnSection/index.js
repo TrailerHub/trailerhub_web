@@ -1,13 +1,22 @@
 import React from 'react'
-import { Container, Heading, SubHeading } from './LearnSectionElements'
+import { learnData } from '../../content/learnData'
+import PostContainer from '../PostContainer'
+import { Container, Heading, SubHeading, Grid } from './LearnSectionElements'
 
 export const LearnSection = () => {
     return (
         <div id="learn">
             <Container>
                 <div>
-                    <Heading>Frequently Asked Questions</Heading>
-                    <SubHeading>If you have any questions that aren't on this page, contact us!</SubHeading>
+                    <Heading>Learn</Heading>
+                    <SubHeading>This isn't official advice, always do your own research for the trailer you're using.</SubHeading>
+                    {learnData &&
+                        <Grid>
+                            {learnData.map((post) => (
+                                <PostContainer post={post} />
+                            ))}
+                        </Grid>
+                    }
                 </div>
             </Container>
         </div>
