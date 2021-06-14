@@ -1,7 +1,7 @@
 import React from 'react';
 import emailjs from 'emailjs-com';
 import { toast } from 'react-toastify';
-import { ContactWrapper, InputContainer, TextArea, ContactInfoTextLink, Form, TextInput, SubmitButton, GridWrapper, ContactInfoWrapper, ButtonWrapper, Heading, ComponentWrapper, HeadingWrapper, ContactInfoText } from './ContactElements';
+import { ContactWrapper, TextArea, ContactInfoTextLink, Form, TextInput, SubmitButton, GridWrapper, ContactInfoWrapper, ButtonWrapper, Heading, ComponentWrapper, HeadingWrapper, ContactInfoText } from './ContactElements';
 
 export default function Contact() {
 
@@ -35,7 +35,7 @@ export default function Contact() {
     }
 
     return (
-        <ComponentWrapper>
+        <ComponentWrapper id="contact">
             <HeadingWrapper>
                 <Heading>Contact Us</Heading>
             </HeadingWrapper>

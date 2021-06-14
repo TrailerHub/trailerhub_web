@@ -121,20 +121,14 @@ export const hostSecSix = {
 export const hostAdInfo = [
     {
         headline: 'Earnings',
-        body: 'You earn 90% of the total price, TrailerHub earns 10%.'
-    },{
-        headline: 'Safety',
-        body: 'Your trailer location and contact information will not be disclosed to anyone unless they are currently renting one of your trailers.'
+        body: 'You earn 90% of the total price, TrailerHub earns 10%.',
+        headline2: 'Safety',
+        body2: 'Your trailer location and contact information will not be disclosed to anyone unless they are currently renting one of your trailers.'
     },
     {
         headline: 'Insurance',
-        body: 'TrailerHub does not currently provide any trailer insurance, however we strongly suggest that you get a policy through a third party insurance company.'
-    },{
-        headline: 'Cancellation',
-        body: 'The Renter can cancel the booking without penalty 24 hours before the start time. If cancelled less than 24 hours, we have a rental cancellation policy (please see the Terms of Service for more information). You, the Host, can cancel the rental anytime before the start date. If you need to cancel after the Renter has picked up the trailer, please call our support at +1 (888)-777-9423 or email us at support@trailerhub.io'
+        body: 'TrailerHub does not currently provide any trailer insurance, however we strongly suggest that you get a policy through a third party insurance company.',
+        headline2: 'Cancellation',
+        body2: <p>You, the Host, can cancel the rental anytime before the start date. Renters can cancel without penalty up to 24 hours before the start time. Once within the 24 hour window, they are charged a days rent. Please see the <a href='/termsofservicedoc.html' target="_blank">Terms of Service</a> for more information.</p>
     },
-    {
-        headline: 'Trailer Companies',
-        body: 'YIf you have a lot of trailers you’d like to add to TrailerHub you don’t need to add them one by one, just contact our support team and we can help get you set up. All we’ll need is a spreadsheet with your trailers’ information and some pictures of each trailer.'
-    }
 ]

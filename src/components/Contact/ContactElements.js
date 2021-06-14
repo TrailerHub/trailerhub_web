@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { trailerHubBlack, trailerHubGreen } from '../../colors';
+import { trailerHubBlack } from '../../colors';
 
 export const ComponentWrapper = styled.div`
     background: linear-gradient(104.2deg, #54AEF0 -26.26%, #60E783 123.52%);

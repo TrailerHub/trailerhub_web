@@ -101,10 +101,8 @@ export const rentSecFive = {
 export const renterAdInfo = [
     {
         headline: 'Cancellation',
-        body: 'You can cancel the booking without penalty up to 24 hours before the start time. If you cancel within 24 hours of the booking start time, you will be charged one days rent price (see our terms of service for more information).'
-    },
-    {
-        headline: 'Notice',
-        body: 'Make sure to balance the load on the trailer to prevent fish-tailing and other problems that can arise from improper loading. If you are new to towing trailers please make sure to read up on the nuances of driving while towing a trailer. Your vehicle will behave differently while towing a trailer, and things like turn radius and start/stop time will be different.'
+        body: <p>You can cancel the booking without penalty up to 24 hours before the start time. If you cancel within 24 hours of the booking start time, you will be charged one days rent price (see our <a href='/termsofservicedoc.html' target="_blank">Terms of Service</a> for more information).</p>,
+        headline2: 'Notice',
+        body2: 'Make sure to balance the load on the trailer to prevent fish-tailing and other problems that can arise from improper loading. If you are new to towing trailers please make sure to read up on the nuances of driving while towing a trailer. Your vehicle will behave differently while towing a trailer, and things like turn radius and start/stop time will be different.'
     }
 ]

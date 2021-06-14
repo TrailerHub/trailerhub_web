@@ -29,7 +29,7 @@ const NavBar = ({ toggle }) => {
         <>
             <Nav scrollNav={scrollNav} path={location}>
                 <NavBarContainer>
-                    <NavLogo to='/' onClick={toggleHome} title="TrailerHub"><LogoImage src="/images/logo_title.svg" alt="TrailerHub Logo" scrollNav={scrollNav} title="TrailerHub" location={location === '/howitworks'}/></NavLogo>
+                    <NavLogo to='/' onClick={toggleHome} title="TrailerHub"><LogoImage src="/images/logo_title.svg" alt="TrailerHub Logo" scrollNav={scrollNav} title="TrailerHub" location={location}/></NavLogo>
                     <MobileIcon onClick={toggle} scrollNav={scrollNav}>
                         <FiMenu type="button" aria-label="open menu" aria-haspopup="true" />
                     </MobileIcon>
@@ -40,9 +40,15 @@ const NavBar = ({ toggle }) => {
                         <NavItem>
                             <NavLinks scrollNav={scrollNav} onClick={() => toggleHome()} to="/howitworks" >How it Works</NavLinks>
                         </NavItem>
+                        <NavItem>
+                            <NavLinks scrollNav={scrollNav} onClick={() => toggleHome()} to="/faq">FAQ</NavLinks>
+                        </NavItem>
+                        <NavItem>
+                            <NavLinks scrollNav={scrollNav} onClick={() => toggleHome()} to="/learn" >Learn</NavLinks>
+                        </NavItem>
                     </NavMenu>
                     <NavBtn>
-                        <NavBtnLink to='contact' scrollNav={scrollNav}>Contact Us</NavBtnLink>
+                        <NavBtnLink to="contact" scrollNav={scrollNav} smooth={true} duration={500} spy={true} exact='true' offset={-80}>Contact Us</NavBtnLink>
                     </NavBtn>
                 </NavBarContainer>
             </Nav>

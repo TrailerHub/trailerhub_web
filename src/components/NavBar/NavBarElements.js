@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { Link as LinkR } from 'react-router-dom'
+import { Link as LinkS } from 'react-scroll'
 import { trailerHubBlack } from '../../colors'
 
 export const Nav = styled.nav`
@@ -50,7 +51,7 @@ export const NavLogo = styled(LinkR)`
 
 export const LogoImage = styled.img`
     width: 100%;
-    filter: ${({ location }) => location ? 'brightness(0) invert(1)' : 'none'};
+    filter: ${({ location }) => location === '/howitworks' || location === '/faq'? 'brightness(0) invert(1)' : 'none'};
     filter: ${({ scrollNav }) => scrollNav && 'none'};
     
     @media screen and (max-width: 1100px) {
@@ -68,7 +69,7 @@ export const LogoImage = styled.img`
 export const MobileIcon = styled.div`
     display: none;
 
-    @media screen and (max-width: 900px) {
+    @media screen and (max-width: 1100px) {
         filter: ${({ scrollNav }) => scrollNav ? 'none' : 'brightness(0) invert(1)'};
         display: block;
         position: absolute;
@@ -87,10 +88,10 @@ export const NavMenu = styled.ul`
     justify-content: center;
     list-style: none;
     text-align: center;
-    left: 0;
-    right: 0;
+    /* left: 0;
+    right: 0; */
 
-    @media screen and (max-width: 900px) {
+    @media screen and (max-width: 1100px) {
         display: none;
     }
 `;
@@ -126,12 +127,12 @@ export const NavBtn = styled.div`
     align-items: center;
     justify-content: center;
 
-    @media screen and (max-width: 900px) {
+    @media screen and (max-width: 1100px) {
         display: none;
     }
 `;
 
-export const NavBtnLink = styled.button`
+export const NavBtnLink = styled(LinkS)`
     border-radius: 12px;
     background: ${({ scrollNav }) => scrollNav ? '#373737' : 'rgba(255, 255, 255, 0.3)'};
     white-space: nowrap;

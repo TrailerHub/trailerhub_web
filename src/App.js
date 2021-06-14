@@ -10,6 +10,8 @@ import SideBar from './components/SideBar'
 import NavBar from './components/NavBar'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import FAQ from './pages/faq';
+import Learn from './pages/learn';
 
 function App() {
   const [isOpen, setIsOpen] = useState(false)
@@ -25,6 +27,8 @@ function App() {
         <Switch>
           <Route exact path='/' component={Home} />
           <Route exact path='/howitworks' component={HowItWorks} />
+          <Route exact path='/faq' component={FAQ} />
+          <Route exact path='/learn' component={Learn} />
           <Route exact path="/privacypolicydoc.html" component={PP} />
           <Route exact path="/termsofservicedoc.html" component={ToS} />
         </Switch>

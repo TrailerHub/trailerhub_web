@@ -1,7 +1,8 @@
 import Cards from '../components/Cards'
+import Contact from '../components/Contact'
 import HeroSection from '../components/HeroSection'
 import InfoSection from '../components/InfoSection'
-import { secOne, secThree, secTwo } from '../components/InfoSection/data'
+import { secOne, secThree, secTwo } from '../content/data.js'
 
 const Home = () => {
     return (
@@ -13,6 +14,7 @@ const Home = () => {
                 <InfoSection {...secTwo} />
                 <InfoSection {...secThree} />
             </div>
+            <Contact/>
         </div>
     )
 }

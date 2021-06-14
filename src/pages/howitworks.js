@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import Contact from '../components/Contact'
 import InfoSection from '../components/InfoSection'
-import { hostSecOne, hostSecTwo, hostSecThree, hostSecFour, hostSecFive, hostSecSix } from '../components/InfoSection/hostSteps'
-import { rentSecOne, rentSecTwo, rentSecThree, rentSecFour, rentSecFive } from '../components/InfoSection/renterSteps'
+import { hostSecOne, hostSecTwo, hostSecThree, hostSecFour, hostSecFive, hostSecSix, hostAdInfo } from '../content/hostSteps'
+import InfoContainer from '../components/InfoContainer'
+import { rentSecOne, rentSecTwo, rentSecThree, rentSecFour, rentSecFive, renterAdInfo } from '../content/renterSteps'
 import { PageHeader } from '../components/PageHeader'
 
 const HowItWorks = () => {
@@ -22,6 +23,7 @@ const HowItWorks = () => {
                         <InfoSection {...rentSecThree} />
                         <InfoSection {...rentSecFour} />
                         <InfoSection {...rentSecFive} />
+                        <InfoContainer info={renterAdInfo}/>
                     </>
                     :
                     <>
@@ -31,6 +33,7 @@ const HowItWorks = () => {
                         <InfoSection {...hostSecFour} />
                         <InfoSection {...hostSecFive} />
                         <InfoSection {...hostSecSix} />
+                        <InfoContainer info={hostAdInfo}/>
                     </>
                 }
             </div>

@@ -46,7 +46,7 @@ export const secThree = {
     lightTextDesc: true,
     topLine: "Business Hosting",
     headline: 'Hosting your company\'s trailers on TrailerHub',
-    description: 'Get extra leads by non exclusively posting your trailers on TrailerHub at no cost to you - just add our 10% fee to your regular price. You decide the the daily rate, availability, and pickup/drop-off location. We also keep track of all of your rental records, so that you don\'t have to.',
+    description: 'Get extra leads by non exclusively posting your trailers on TrailerHub at no cost to you - just add our 10% fee to your regular price. You decide the the daily rate, availability, and pickup/drop-off location. We also keep track of all of your rental records, so that you don\'t have to. If you have a lot of trailers you’d like to upload you don’t need to add them one by one, just contact our support team and we can help get you set up.',
     buttonLabel: 'See more',
     imgStart: false,
     img: "/images/host_rental_record.png",
