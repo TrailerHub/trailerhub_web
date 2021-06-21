@@ -9,7 +9,7 @@ export const LearnSection = () => {
             <Container>
                 <div>
                     <Heading>Learn</Heading>
-                    <SubHeading>This isn't official advice, always do your own research for the trailer you're using.</SubHeading>
+                    <SubHeading>Here are some articles we found around the web that we think are very helpful. This isn't official advice, always do your own research for the trailer you're using.</SubHeading>
                     {learnData &&
                         <Grid>
                             {learnData.map((post) => (

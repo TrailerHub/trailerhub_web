@@ -47,7 +47,7 @@ const NavBar = ({ toggle }) => {
                             <NavLinks scrollNav={scrollNav} onClick={() => toggleHome()} to="/learn" >Learn</NavLinks>
                         </NavItem>
                     </NavMenu>
-                    <NavBtn location={location}>
+                    <NavBtn>
                         <NavBtnLink to="contact" scrollNav={scrollNav} smooth={true} duration={500} spy={true} exact='true' offset={-80}>Contact Us</NavBtnLink>
                     </NavBtn>
                 </NavBarContainer>

@@ -123,7 +123,7 @@ export const BtnDropDownWrapper = styled.div`
 export const NavBtn = styled.div`
     position: absolute;
     right: 0;
-    display: ${({ location }) => location === '/faq' ? 'none' : 'flex'};
+    display: flex;
     align-items: center;
     justify-content: center;
 

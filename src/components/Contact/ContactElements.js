@@ -2,8 +2,12 @@ import styled from 'styled-components'
 import { trailerHubBlack } from '../../colors';
 
 export const ComponentWrapper = styled.div`
-    background: linear-gradient(104.2deg, #54AEF0 -26.26%, #60E783 123.52%);
+    background: ${({ light }) => (light ? '#fff' : 'linear-gradient(104.2deg, #54AEF0 -26.26%, #60E783 123.52%)')};
     padding: 50px 150px;
+
+    @media screen and (max-width: 700px) {
+        padding: 50px 20px;
+    }
 `
 
 export const ContactWrapper = styled.div`
@@ -37,7 +41,7 @@ export const GridWrapper = styled.div`
 
 export const TextInput = styled.input`
 font-family: 'Ubuntu';
-color: #fff;
+color: ${({ light }) => (light ? 'trailerHubBlack' : '#fff')};
 width: 100%;
 display: grid;
 grid-template-columns: 1fr;
@@ -48,11 +52,11 @@ padding: 15px;
 border: 0.5px solid;
 border-radius: 12px;
 margin: 15px 0;
-border-color: rgba(255, 255, 255, 0.8);
-background-color: rgba(255, 255, 255, 0.3);
+border-color: ${({ light }) => (light ? 'trailerHubBlack' : 'rgba(255, 255, 255, 0.8)')};
+background-color: ${({ light }) => (light ? 'trailerHubBlack' : 'rgba(255, 255, 255, 0.3)')};
 
 &::placeholder {
-    color: #fff;
+    color: ${({ light }) => (light ? 'trailerHubBlack' : '#fff')};
 }
 
 &:hover {
@@ -76,12 +80,12 @@ padding: 15px;
 border: 0.5px solid;
 border-radius: 14px;
 margin: 5px 0;
-border-color: rgba(255, 255, 255, 0.8);
-background-color: rgba(255, 255, 255, 0.3);
-color: #fff;
+border-color: ${({ light }) => (light ? 'trailerHubBlack' : 'rgba(255, 255, 255, 0.8)')};
+background-color: ${({ light }) => (light ? 'trailerHubBlack' : 'rgba(255, 255, 255, 0.3)')};
+color: ${({ light }) => (light ? 'trailerHubBlack' : '#fff')};
 
 &::placeholder {
-    color: #fff;
+    color: ${({ light }) => (light ? 'trailerHubBlack' : '#fff')};
 }
 
 &:hover {
@@ -144,7 +148,7 @@ export const Heading = styled.h1`
     font-size: 2.6rem;
     line-height: 1.1;
     font-weight: 600;
-    color: #fff;
+    color: ${({ light }) => (light ? 'trailerHubBlack' : '#fff')};
 
     @media screen and (max-width: 1200px) {
         font-size: 2.3rem;
@@ -157,7 +161,7 @@ export const Heading = styled.h1`
 `;
 
 export const ContactInfoText = styled.p`
-    color: #fff;
+    color: ${({ light }) => (light ? 'trailerHubBlack' : '#fff')};
     text-decoration: none;
     font-size: 1rem;
 
@@ -167,7 +171,7 @@ export const ContactInfoText = styled.p`
 `
 
 export const ContactInfoTextLink = styled.a`
-    color: #fff;
+    color: ${({ light }) => (light ? 'trailerHubBlack' : '#fff')};
     text-decoration: none;
     font-size: 1rem;
     padding: 0;

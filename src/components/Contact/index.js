@@ -3,7 +3,7 @@ import emailjs from 'emailjs-com';
 import { toast } from 'react-toastify';
 import { ContactWrapper, TextArea, ContactInfoTextLink, Form, TextInput, SubmitButton, GridWrapper, ContactInfoWrapper, ButtonWrapper, Heading, ComponentWrapper, HeadingWrapper, ContactInfoText } from './ContactElements';
 
-export default function Contact() {
+export default function Contact({light}) {
 
     function sendEmail(e) {
         e.preventDefault();
@@ -35,23 +35,23 @@ export default function Contact() {
     }
 
     return (
-        <ComponentWrapper id="contact">
+        <ComponentWrapper id="contact" light={light}>
             <HeadingWrapper>
-                <Heading>Contact Us</Heading>
+                <Heading light={light}>Contact Us</Heading>
             </HeadingWrapper>
             <HeadingWrapper>
                 <ContactInfoWrapper>
-                    <ContactInfoTextLink href="tel:+18887779423">(888) - 777 - 9423</ContactInfoTextLink>
-                    <ContactInfoText>support@trailerhub.io</ContactInfoText>
+                    <ContactInfoTextLink href="tel:+18887779423" light={light}>(888) - 777 - 9423</ContactInfoTextLink>
+                    <ContactInfoText light={light}>support@trailerhub.io</ContactInfoText>
                 </ContactInfoWrapper>
             </HeadingWrapper>
             <ContactWrapper>
                 <Form onSubmit={(e) => sendEmail(e)}>
                     <GridWrapper>
-                        <TextInput placeholder="Name" aria-label="Name" type="text" name="user_number" />
-                        <TextInput placeholder="Email" aria-label="Email" type="email" name="user_email" />
+                        <TextInput placeholder="Name" aria-label="Name" type="text" name="user_number" light={light}/>
+                        <TextInput placeholder="Email" aria-label="Email" type="email" name="user_email" light={light}/>
                     </GridWrapper>
-                    <TextArea placeholder="Message" aria-label="Message" name="message" />
+                    <TextArea placeholder="Message" aria-label="Message" name="message" light={light}/>
                     <ButtonWrapper>
                         <SubmitButton role="button" type="submit" />
                     </ButtonWrapper>

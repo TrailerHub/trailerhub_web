@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { faqData } from '../../content/FAQData';
+import Contact from '../Contact';
 import { Container, Heading, SubHeading, SubText, FAQCardContainer, H3, ExpandedContainer, InfoContainer, FAQContainer } from './FAQSectionElements';
 
 const FAQSection = () => {
@@ -14,26 +15,26 @@ const FAQSection = () => {
             <Container>
                 <div>
                     <Heading>Frequently Asked Questions</Heading>
-                    <SubHeading>If you have any questions that aren't on this page, contact us!</SubHeading>
+                    <SubHeading>If you have any questions that aren't on this page, contact us using the form below!</SubHeading>
                     {faqData && <FAQContainer>
                         {faqData.map((faq) => (
                             <div key={faq.id} onClick={() => setNewExpandedId(faq.id)} role="button">
                                 <FAQCardContainer>
                                     <InfoContainer>
                                         <H3>{faq.title}</H3>
-                                        {expandedId === faq.id && 
-                                        <ExpandedContainer>
-                                            <SubText>{faq.body}</SubText>
+                                        {expandedId === faq.id &&
+                                            <ExpandedContainer>
+                                                <SubText>{faq.body}</SubText>
                                             </ExpandedContainer>
-                                    }
+                                        }
                                     </InfoContainer>
                                 </FAQCardContainer>
                             </div>
                         ))}
                     </FAQContainer>}
-
                 </div>
             </Container>
+            <Contact light={true}/>
         </div>
     )
 }
