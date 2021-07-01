@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/trailerhub_web/static/css/main.249eafa6.chunk.css",
+    "main.js": "/trailerhub_web/static/js/main.602df5e0.chunk.js",
+    "main.js.map": "/trailerhub_web/static/js/main.602df5e0.chunk.js.map",
+    "runtime-main.js": "/trailerhub_web/static/js/runtime-main.9169a5ce.js",
+    "runtime-main.js.map": "/trailerhub_web/static/js/runtime-main.9169a5ce.js.map",
+    "static/css/2.97503911.chunk.css": "/trailerhub_web/static/css/2.97503911.chunk.css",
+    "static/js/2.1bc6d2dd.chunk.js": "/trailerhub_web/static/js/2.1bc6d2dd.chunk.js",
+    "static/js/2.1bc6d2dd.chunk.js.map": "/trailerhub_web/static/js/2.1bc6d2dd.chunk.js.map",
+    "static/js/3.200042aa.chunk.js": "/trailerhub_web/static/js/3.200042aa.chunk.js",
+    "static/js/3.200042aa.chunk.js.map": "/trailerhub_web/static/js/3.200042aa.chunk.js.map",
+    "index.html": "/trailerhub_web/index.html",
+    "static/css/2.97503911.chunk.css.map": "/trailerhub_web/static/css/2.97503911.chunk.css.map",
+    "static/css/main.249eafa6.chunk.css.map": "/trailerhub_web/static/css/main.249eafa6.chunk.css.map",
+    "static/js/2.1bc6d2dd.chunk.js.LICENSE.txt": "/trailerhub_web/static/js/2.1bc6d2dd.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/trailerhub_web/static/media/header_shape.3d00b1a2.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9169a5ce.js",
+    "static/css/2.97503911.chunk.css",
+    "static/js/2.1bc6d2dd.chunk.js",
+    "static/css/main.249eafa6.chunk.css",
+    "static/js/main.602df5e0.chunk.js"
+  ]
+}
