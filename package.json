@@ -1,6 +1,6 @@
 {
   "name": "trailerhub_web",
-  "homepage": "https://trailerhub.github.io/trailerhub_web/",
+  "homepage": "http://trailerhub.io/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
