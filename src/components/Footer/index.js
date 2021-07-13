@@ -17,8 +17,8 @@ const Footer = ({path}) => {
                     </FlexWrap>
                     <CopyTermsPolicyContainer>
                         <CopyRightText>{String.fromCharCode(169)} TrailerHub, Inc.</CopyRightText>
-                        <CopyTermsLink to='/termsofservicedoc.html' target="_blank">Terms of Service</CopyTermsLink>
-                        <CopyTermsLink to='/privacypolicydoc.html' target="_blank">Privacy Policy</CopyTermsLink>
+                        <CopyTermsLink to='/termsofservicedoc' smooth={true} duration={500} spy={true} exact='true' onClick={() => toggleHome()}>Terms of Service</CopyTermsLink>
+                        <CopyTermsLink to='/privacypolicydoc' smooth={true} duration={500} spy={true} exact='true' onClick={() => toggleHome()}>Privacy Policy</CopyTermsLink>
                     </CopyTermsPolicyContainer>
                 </ContentContainer>
                 <ContentContainer>

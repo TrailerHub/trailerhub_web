@@ -13,6 +13,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description"
     content="TrailerHub connects trailer owners who want to conveniently and securely rent out their trailers to nearby people seeking trailers to rent." />
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@rent_trailers">
+  <meta name="twitter:title" content="TrailerHub">
+  <meta name="twitter:description"
+    content="Trailer Sharing Marketplace">
+  <meta name="twitter:image"
+    content="https://trailerhub.io/images/trailer_cover_photo.jpg">
   <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -54,14 +61,14 @@
     var chatbox = document.getElementById('fb-customer-chat');
     chatbox.setAttribute("page_id", "104956081829259");
     chatbox.setAttribute("attribution", "biz_inbox");
-    window.fbAsyncInit = function() {
+    window.fbAsyncInit = function () {
       FB.init({
-        xfbml            : true,
-        version          : 'v11.0'
+        xfbml: true,
+        version: 'v11.0'
       });
     };
 
-    (function(d, s, id) {
+    (function (d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) return;
       js = d.createElement(s); js.id = id;
