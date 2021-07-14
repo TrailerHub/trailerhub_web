@@ -30,8 +30,8 @@ function App() {
           <Route exact path='/howitworks' component={HowItWorks} />
           <Route exact path='/faq' component={FAQ} />
           <Route exact path='/learn' component={Learn} />
-          <Route exact path="/privacypolicydoc.html" component={PP} />
-          <Route exact path="/termsofservicedoc.html" component={ToS} />
+          <Route exact path="/privacypolicydoc" component={PP} />
+          <Route exact path="/termsofservicedoc" component={ToS} />
           <Route exact path="/insurance" component={InsurancePage} />
         </Switch>
         <Footer />
