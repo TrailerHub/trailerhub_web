@@ -1,7 +1,7 @@
 import React from 'react'
 import { learnData } from '../../content/learnData'
 import PostContainer from '../PostContainer'
-import { Container, Heading, SubHeading, Grid } from './LearnSectionElements'
+import { Container, Heading, SubHeading, Grid, CenterFlex } from './LearnSectionElements'
 
 export const LearnSection = () => {
     return (
@@ -9,7 +9,7 @@ export const LearnSection = () => {
             <Container>
                 <div>
                     <Heading>Learn</Heading>
-                    <SubHeading>Here are some articles we found around the web that we think are very helpful. This isn't official advice, always do your own research for the trailer you're using.</SubHeading>
+                    <CenterFlex><SubHeading>Here are some articles we found around the web that we think are very helpful. This isn't official advice, always do your own research for the trailer you're using.</SubHeading></CenterFlex>
                     {learnData &&
                         <Grid>
                             {learnData.map((post) => (

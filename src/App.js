@@ -21,7 +21,7 @@ function App() {
   }
 
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <div>
         <SideBar isOpen={isOpen} toggle={toggle} />
         <NavBar toggle={toggle} />

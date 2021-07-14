@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { faqData } from '../../content/FAQData';
 import Contact from '../Contact';
-import { Container, Heading, SubHeading, SubText, FAQCardContainer, H3, ExpandedContainer, InfoContainer, FAQContainer } from './FAQSectionElements';
+import { Container, Heading, SubHeading, CenterFlex, SubText, FAQCardContainer, H3, ExpandedContainer, InfoContainer, FAQContainer } from './FAQSectionElements';
 
 const FAQSection = () => {
     const [expandedId, setExpandedId] = useState(null);
@@ -15,7 +15,7 @@ const FAQSection = () => {
             <Container>
                 <div>
                     <Heading>Frequently Asked Questions</Heading>
-                    <SubHeading>If you have any questions that aren't on this page, contact us using the form below!</SubHeading>
+                    <CenterFlex><SubHeading>If you have any questions that aren't on this page, contact us using the form below!</SubHeading></CenterFlex>
                     {faqData && <FAQContainer>
                         {faqData.map((faq) => (
                             <div key={faq.id} onClick={() => setNewExpandedId(faq.id)} role="button">

@@ -53,11 +53,13 @@ export const Heading = styled.h1`
 
 export const SubHeading = styled.h2`
     margin-bottom: 20px;
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 300;
     color: #fff;
+    width: 60%;
+    line-height: 1.5rem;
 
-    @media screen and (max-width: 1150px) {
+    @media screen and (max-width: 1300px) {
         color:  ${trailerHubBlack};
     }
 
@@ -107,4 +109,10 @@ export const H3 = styled.h3`
     font-size: 1rem;
     font-weight: 400;
     color: ${trailerHubBlack};
+`
+
+export const CenterFlex = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `
