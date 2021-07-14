@@ -109,13 +109,9 @@ export const P = styled.p`
     margin-bottom: 20px;
     font-size: 1.1rem;
     font-weight: 300;
-    color: #fff;
+    color:  ${trailerHubBlack};
     width: 80%;
     line-height: 1.5rem;
-
-    @media screen and (max-width: 1450px) {
-        color:  ${trailerHubBlack};
-    }
 
     @media screen and (max-width: 800px) {
         text-align: center;
