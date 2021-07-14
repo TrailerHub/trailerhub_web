@@ -24,7 +24,7 @@ export const Heading = styled.h1`
         font-size: 2.3rem;
     }
 
-    @media screen and (max-width: 1300px) {
+    @media screen and (max-width: 1450px) {
         color:  ${trailerHubBlack};
     }
 
@@ -36,27 +36,18 @@ export const Heading = styled.h1`
 
 export const SubHeading = styled.h2`
     margin-bottom: 20px;
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 300;
     color: #fff;
+    width: 60%;
+    line-height: 1.5rem;
 
-    @media screen and (max-width: 1300px) {
+    @media screen and (max-width: 1450px) {
         color:  ${trailerHubBlack};
     }
 
     @media screen and (max-width: 800px) {
         text-align: center;
-    }
-`;
-
-export const SubText = styled.p`
-    font-size: 0.9rem;
-    color: ${trailerHubBlack};
-    opacity: 0.6;
-
-    @media screen and (max-width: 480px) {
-        font-size: 14px;
-        line-height: 20px;
     }
 `;
 
@@ -76,4 +67,10 @@ export const Grid = styled.div`
     @media screen and (max-width: 900px) {
         grid-template-columns: 1fr;
     }
+`
+
+export const CenterFlex = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `

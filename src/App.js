@@ -12,6 +12,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import FAQ from './pages/faq';
 import Learn from './pages/learn';
+import InsurancePage from './pages/insurancepage';
 
 function App() {
   const [isOpen, setIsOpen] = useState(false)
@@ -20,7 +21,7 @@ function App() {
   }
 
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <div>
         <SideBar isOpen={isOpen} toggle={toggle} />
         <NavBar toggle={toggle} />
@@ -31,6 +32,7 @@ function App() {
           <Route exact path='/learn' component={Learn} />
           <Route exact path="/privacypolicydoc" component={PP} />
           <Route exact path="/termsofservicedoc" component={ToS} />
+          <Route exact path="/insurance" component={InsurancePage} />
         </Switch>
         <Footer />
       </div>

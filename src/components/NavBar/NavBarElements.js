@@ -51,7 +51,7 @@ export const NavLogo = styled(LinkR)`
 
 export const LogoImage = styled.img`
     width: 100%;
-    filter: ${({ location }) => location === '/howitworks' || location === '/faq' || location === '/learn' ? 'brightness(0) invert(1)' : 'none'};
+    filter: ${({ location }) => location === '/howitworks' || location === '/faq' || location === '/learn'  || location === '/insurance'? 'brightness(0) invert(1)' : 'none'};
     filter: ${({ scrollNav }) => scrollNav && 'none'};
     
     @media screen and (max-width: 1100px) {

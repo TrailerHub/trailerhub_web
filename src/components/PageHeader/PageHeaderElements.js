@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { MdArrowForward } from 'react-icons/md'
+import { trailerHubBlack } from '../../colors';
 
 export const HeaderContainer = styled.div`
     display: flex;
@@ -36,16 +37,19 @@ export const Heading = styled.h1`
     }
 `;
 
-export const SubText = styled.p`
-    margin-bottom: 35px;
-    font-size: 18px;
-    line-height: 24px;
+export const SubText = styled.h2`
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    font-weight: 300;
     color: #fff;
+    line-height: 1.5rem;
 
-    @media screen and (max-width: 480px) {
-        font-size: 14px;
-        line-height: 20px;
-        padding: 0 10px;
+    @media screen and (max-width: 1300px) {
+        color:  ${trailerHubBlack};
+    }
+
+    @media screen and (max-width: 800px) {
+        text-align: center;
     }
 `;
 
