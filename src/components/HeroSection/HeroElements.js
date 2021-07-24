@@ -93,8 +93,9 @@ export const HeroContent = styled.div`
 
 export const HeroH1 = styled.div`
     color: #373737;
-    font-size: 4.2rem;
+    font-size: 4rem;
     text-align: left;
+    line-height: 4.4rem;
     font-weight: 500;
 
     @media screen and (max-width: 800px) {
@@ -111,7 +112,7 @@ export const HeroP = styled.div`
     color: #373737;
     font-size: 1.2rem;
     font-weight: 200;
-    line-height: 2rem;
+    line-height: 1.6rem;
     text-align: left;
     max-width: 600px;
 

@@ -13,8 +13,8 @@ const HeroSection = () => {
             <HeroBg src="/images/hero_shape.svg" alt="Shape" />
             <HeroWrapper>
                 <HeroContent>
-                    <HeroH1>Rent trailers near you</HeroH1>
-                    <HeroP title="TrailerHub">Join our growing peer-to-peer trailer sharing platform on your mobile device to find and rent trailers in your community.</HeroP>
+                    <HeroH1>Trailer sharing marketplace</HeroH1>
+                    <HeroP title="TrailerHub">Join our growing community of trailer hosts and renters in Austin, Texas. Sign up on our mobile app to rent trailers near you.</HeroP>
                     <ButtonsWrapper>
                         <HeroBtnWrapper>
                             <Button to='about' smooth={true} duration={500} spy={true} exact='true' onMouseEnter={onHover} onMouseLeave={onHover
