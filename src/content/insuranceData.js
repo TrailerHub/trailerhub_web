@@ -15,13 +15,4 @@ export const insuranceData = [
         title: 'MBA Insurance',
         author: 'mbainsurance',
         description: 'MBA Insurance will work with companies and indiviudals, and will insure from a single trailer to a whole fleet.'
-    },
-    {
-        id: 2,
-        url: 'https://www.allenins.com/commercial-products/coverage-for-specific-industries/daily-rental-insurance',
-        imageUrl: 'https://www.allenins.com/img/~www.allenins.com/layout-assets/subheader_img_0.jpg',
-        alt: 'People speaking next to a truck',
-        title: 'Allen Insurance Co',
-        author: 'allenins',
-        description: 'Allen Insurance likes working more with larger fleets of trailers.',
     },];
