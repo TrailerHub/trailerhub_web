@@ -4,7 +4,7 @@ import Home from './pages/home.js';
 import ToS from './pages/tos';
 import PP from './pages/pp';
 import HowItWorks from './pages/howitworks';
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Footer from './components/Footer'
 import SideBar from './components/SideBar'
 import NavBar from './components/NavBar'
@@ -13,12 +13,20 @@ import 'react-toastify/dist/ReactToastify.css';
 import FAQ from './pages/faq';
 import Learn from './pages/learn';
 import InsurancePage from './pages/insurancepage';
+import ReactGa from 'react-ga';
 
 function App() {
   const [isOpen, setIsOpen] = useState(false)
   const toggle = () => {
     setIsOpen(!isOpen)
   }
+
+  useEffect(() => {
+    ReactGa.initialize('G-XZ42NKT92M')
+
+    // to report page view
+    ReactGa.pageview(window.location.pathname + window.location.search)
+  }, [])
 
   return (
     <Router basename={process.env.PUBLIC_URL}>
