@@ -1,3 +1,41 @@
+export const hostCalculationsExample1 = "Example 1: you own a 5'x12' utility trailer," +
+    " and you rent it out for a <b>$25</b> per day rental rate. Your trailer is rented on average 10 days every month, so you will earn $225 per month " +
+    " (that's your $25 per day rate multiplied by 10 days, minus the TrailerHub 10% service fee). ";
+
+export const hostCalculationsExample2 = "Example 2: you own a 6'x16' enclosed cargo trailer that you rent out for $70 per day. That's $630 per month if it's rented 10 days per month, and $7,560 per year!";
+
+export const hostCalculationsMessage1 = "As a Host, you can earn a side income by renting out your underused trailer to people in your community." +
+    " Here are a couple of examples of how much you could earn: ";
+
+export const hostCalculationsMessage2 = "When calculating your potential profits, remember to factor in your other costs like maintenance, taxes, and insurance. Typically, insurance will cost between $15-$50 per month " +
+    "for the insurance premium. If you are in Texas, TrailerHub offers to reimburse you for your monthly insurance premium. If you choose the reimbursement option," +
+    " TrailerHub will charge a 15% service fee for your rentals instead of the normal 10% service fee.";
+
+export const hostCalculationsMessage3 = "For more information on insurance and insurance premium" +
+    " reimbursement vist the \"Insurance\" page of the website or call us at +1 (888) 777-9423. Happy hosting!";
+
+
+
+// export const hostCalculationsSec = {
+//     id: 'calc',
+//     lightBg: false,
+//     lightText: true,
+//     lightTextDesc: true,
+//     topLine: "Earnings",
+//     headline: "How Much You Could Earn",
+//     description: 
+//     buttonLabel: 'Learn the Process',
+//     imgStart: false,
+//     // img: "/images/verification_page.png",
+//     // alt: 'TrailerHub Trailer Summary Page',
+//     dark: true,
+//     primary: true,
+//     darkText: false,
+//     linkButton: true,
+//     buttonLinkTo: 'step1',
+//     appLinks: false,
+// }
+
 export const hostSecOne = {
     id: 'step1',
     lightBg: false,
@@ -103,7 +141,7 @@ export const hostSecSix = {
     lightBg: false,
     lightText: true,
     lightTextDesc: true,
-    topLine: "Step 5",
+    topLine: "Step 6",
     headline: "Get paid",
     description: <p>To retrieve your earnings you'll need to access your Stripe dashboard through the "Billing" page. The Stripe dashboard allows you to withdraw your earnings directly into your bank account. Earnings will typically show up on your dashboard within a day after the booking has been finalized.  Transferring money from Stripe to your bank will usually take around 1-3 business days.</p>,
     buttonLabel: 'Additional Info',
