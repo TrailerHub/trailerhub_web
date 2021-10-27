@@ -1,18 +1,20 @@
 import React from 'react'
 import { HeaderContainer, TextWrapper, Heading, SubText, DownArrow, ArrowContainer } from './PageHeaderElements';
 import RadioButtons from '../RadioButtons';
+import { ButtonLink } from '../ButtonLinkElements';
 
-export const PageHeader = ({ radioButton, toggleRentHostSteps }) => {
+export const PageHeader = ({ heading, subtext, buttonLink, buttonText, radioButton, toggleRentHostSteps }) => {
     return (
         <div>
             <HeaderContainer>
                 <TextWrapper>
-                    <Heading>How it works</Heading>
-                    <SubText>Learn how to rent a trailer or get started as a host on TrailerHub.</SubText>
-                    <RadioButtons radioButton={radioButton} toggleRentHostSteps={toggleRentHostSteps} />
-                    <ArrowContainer>
+                    <Heading>{heading}</Heading>
+                    <SubText>{subtext}</SubText>
+                    {radioButton !== undefined && <RadioButtons radioButton={radioButton} toggleRentHostSteps={toggleRentHostSteps} />}
+                    {(buttonLink !== undefined && buttonText !== undefined) && <ButtonLink to={buttonLink}>{buttonText}</ButtonLink>}
+                    {radioButton !== undefined && <ArrowContainer>
                         <DownArrow />
-                    </ArrowContainer>
+                    </ArrowContainer>}
                 </TextWrapper>
             </HeaderContainer>
         </div>

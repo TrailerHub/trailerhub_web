@@ -22,9 +22,9 @@ export const TextWrapper = styled.div`
 
 export const Heading = styled.h1`
     margin-bottom: 24px;
-    font-size: 2.6rem;
+    font-size: 2.4rem;
     line-height: 1.1;
-    font-weight: 600;
+    font-weight: 500;
     color: #fff;
 
     @media screen and (max-width: 1200px) {

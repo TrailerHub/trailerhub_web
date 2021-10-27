@@ -21,6 +21,20 @@ export const ContactWrapper = styled.div`
     }
 `
 
+export const LinkButtonsWrapper = styled.div`
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+`
+
+export const FlexCenter = styled.div`
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+`
+
 export const Form = styled.form`
     margin: 0;
     padding: 0;
@@ -193,4 +207,24 @@ export const ContactInfoWrapper = styled.div`
     @media screen and (max-width: 800px) {
         grid-template-columns: 1fr;
     }
+`
+
+export const Subtitle = styled.p`
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    width: 60%;
+`;
+
+export const HR = styled.hr`
+    color: white;
+    background-color: white;
+    height: 1px;
+    border-width: 0;
+    opacity: 0.3;
+    width: 80%;
+    margin: 10px 0;
+    justify-self: center;
 `

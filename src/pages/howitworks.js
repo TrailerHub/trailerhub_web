@@ -14,7 +14,7 @@ const HowItWorks = () => {
     }
     return (
         <div>
-            <PageHeader radioButton={radioButton} toggleRentHostSteps={toggleRentHostSteps} />
+            <PageHeader heading='How it Works' subtext='Learn how to rent a trailer or get started as a host on TrailerHub.' radioButton={radioButton} toggleRentHostSteps={toggleRentHostSteps} />
             <div className="bg-shape2">
                 {radioButton ?
                     <>
@@ -23,7 +23,7 @@ const HowItWorks = () => {
                         <InfoSection {...rentSecThree} />
                         <InfoSection {...rentSecFour} />
                         <InfoSection {...rentSecFive} />
-                        <InfoContainer info={renterAdInfo}/>
+                        <InfoContainer info={renterAdInfo} />
                     </>
                     :
                     <>
@@ -33,11 +33,11 @@ const HowItWorks = () => {
                         <InfoSection {...hostSecFour} />
                         <InfoSection {...hostSecFive} />
                         <InfoSection {...hostSecSix} />
-                        <InfoContainer info={hostAdInfo}/>
+                        <InfoContainer info={hostAdInfo} />
                     </>
                 }
             </div>
-            <Contact/>
+            <Contact />
         </div>
     )
 }
