@@ -29,8 +29,8 @@ const TrailerPage = () => {
             trailerId: trailerId
         }).then(res =>
             res.data
-        )
-    )
+        ), { retry: 2 }
+    );
 
     const rentButtonTapped = () => {
         if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
@@ -44,24 +44,25 @@ const TrailerPage = () => {
 
     if (error) showToast(error.message);
 
-    if (trailerId === undefined || error) {
+    if (trailerId === undefined || error || data == null) {
         <Redirect to="/404" />
     }
 
     return (
         <div>
-            <ImageSlider slides={data['trailerImages'] ?? []} />
-            <TrailerContent
-                topLine={`${data['trailerDoc']['modelYear']} ${data['trailerDoc']['manufacturer']} ${data['trailerDoc']['model']} | ${data['trailerDoc']['width']}' x ${data['trailerDoc']['length']}'`}
-                headline={`${data['trailerDoc']['trailerBodyType']}`}
-                description={`${data['trailerDoc']['description']}`}
-                buttonLinkTo={rentButtonTapped()}
-                buttonLabel="Rent on TrailerHub"
-                dailyRate={`$${data['trailerDoc']['dailyRate']}`}
-                location={`${data['trailerDoc']['city']}, ${data['trailerDoc']['state']}`}
-                rating={`${data['trailerDoc']['rating']}`}
-            />
-            <Contact />
+            {data !== undefined && <>{data['trailerImages'] !== undefined &&
+                <ImageSlider slides={data['trailerImages'] ?? []} />}
+                <TrailerContent
+                    topLine={`${data['trailerDoc']['modelYear']} ${data['trailerDoc']['manufacturer']} ${data['trailerDoc']['model']} | ${data['trailerDoc']['width']}' x ${data['trailerDoc']['length']}'`}
+                    headline={`${data['trailerDoc']['trailerBodyType']}`}
+                    description={`${data['trailerDoc']['description']}`}
+                    buttonLinkTo={rentButtonTapped()}
+                    buttonLabel="Rent on TrailerHub"
+                    dailyRate={`$${data['trailerDoc']['dailyRate']}`}
+                    location={`${data['trailerDoc']['city']}, ${data['trailerDoc']['state']}`}
+                    rating={`${data['trailerDoc']['rating']}`}
+                />
+                <Contact /></>}
         </div>
     )
 }
