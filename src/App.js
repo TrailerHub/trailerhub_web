@@ -4,7 +4,7 @@ import Home from './pages/home.js';
 import ToS from './pages/tos';
 import PP from './pages/pp';
 import HowItWorks from './pages/howitworks';
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Footer from './components/Footer'
 import SideBar from './components/SideBar'
 import NavBar from './components/NavBar'
@@ -16,6 +16,7 @@ import InsurancePage from './pages/insurancepage';
 import NotFoundPage from './pages/notfoundpage';
 import TrailerPage from './pages/trailerpage';
 import { QueryClient, QueryClientProvider } from 'react-query'
+import ReactGa from 'react-ga';
 
 function App() {
   const [isOpen, setIsOpen] = useState(false)
@@ -24,6 +25,13 @@ function App() {
   }
   const queryClient = new QueryClient()
 
+
+  useEffect(() => {
+    ReactGa.initialize('UA-156564619-1')
+
+    // to report page view
+    ReactGa.pageview(window.location.pathname + window.location.search)
+  }, [])
 
   return (
     <QueryClientProvider client={queryClient}>
