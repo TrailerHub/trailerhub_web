@@ -33,6 +33,21 @@ export const WhiteMiddleContainer = styled.div`
     }
 `;
 
+export const WhiteInnerContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 00px 50px 100px 50px;
+
+    // @media screen and (max-width: 1000px) {
+    //     padding: 100px 50px;
+    // }
+
+    // @media screen and (max-width: 500px) {
+    //     padding: 100px 10px;
+    // }
+`;
+
 export const Grid = styled.div`
     display: grid;
     width: 100%;
