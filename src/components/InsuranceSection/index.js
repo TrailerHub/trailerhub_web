@@ -22,7 +22,10 @@ const InsuranceSection = () => {
 
                             <H2>Insurance Reimbursement</H2>
                             <CenterFlex><HR /></CenterFlex>
-                            <CenterFlex><P> Message about insurance</P></CenterFlex>
+                            <CenterFlex><P> If you are in Texas, TrailerHub offers to reimburse you for your monthly insurance premium.
+                                 If you choose the reimbursement option, TrailerHub will charge a 15% service fee for your rentals
+                                  instead of the normal 10% service fee. Contact insurance@trailerhub.io with proof of 
+                                  your insurance policy to get started.</P></CenterFlex>
                         </div>
 
                     </WhiteInnerContainer>
