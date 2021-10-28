@@ -7,13 +7,14 @@ export const InfoContainer = styled.div`
 `;
 
 export const TrailerInfoDiv = styled.div`
-    flex: 1;
-    flex: 30%;
     align-items: center;
     justify-content: center;
 
     @media screen and (max-width: 1000px) {
-        flex: 1;
+        width: 70%;
+    }
+    @media screen and (max-width: 600px) {
+        width: 70%;
     }
 `
 
@@ -25,6 +26,7 @@ export const InfoWrapper = styled.div`
 
     @media screen and (max-width: 1000px) {
         padding: 0;
+        align-items: center;
     }
 `;
 
@@ -38,6 +40,7 @@ export const InfoRow = styled.div`
     @media screen and (max-width: 1000px) {
         display: grid;
         text-align: center;
+        align-items: center;
         justify-content: center;
         grid-template-areas: 'col1' 'col2';
     }
@@ -45,7 +48,7 @@ export const InfoRow = styled.div`
 
 export const Column1 = styled.div`
     display: flex;
-    flex: 70%;
+    flex: 90%;
     justify-content: flex-start;
     grid-area: 'col1';
     margin-right: 50px;
@@ -182,6 +185,7 @@ export const Button = styled.a`
     transition: all 0.2s ease-in-out;
     width: 100%;
     margin: 0 0 10px;
+    text-decoration: none;
 
     &:hover {
         transform: scale(1.05);
@@ -222,7 +226,15 @@ export const IconGrid = styled.div`
 `;
 
 export const Padding = styled.div`
-    padding: 0 20px;
+    display: flex;
+    flex: 30%;
+    justify-content: center;
+    align-items: center;
+    @media screen and (max-width: 1000px) {
+        padding: 0 20px;
+        flex: 1;
+        width: 100%
+    }
 `
 
 export const OutlineContainer = styled.div`
@@ -245,7 +257,6 @@ export const SmallText = styled.p`
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
-    margin-left: 10px;
 `
 
 export const IconTextContainer = styled.div`

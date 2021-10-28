@@ -11,41 +11,35 @@ const TrailerPage = () => {
     const loc = useLocation();
     let params = new URLSearchParams(loc.search);
     const trailerId = params.get('id');
+    const onMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const appStoreLink = 'https://apps.apple.com/us/app/trailerhub-rent-trailers/id1551725129';
 
-    const showToast = (msg) => {
-        toast(msg, {
-            position: "bottom-center",
-            autoClose: 3000,
-            hideProgressBar: true,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-        });
-    }
+    // const showToast = (msg) => {
+    //     toast(msg, {
+    //         position: "bottom-center",
+    //         autoClose: 3000,
+    //         hideProgressBar: true,
+    //         closeOnClick: true,
+    //         pauseOnHover: true,
+    //         draggable: true,
+    //         progress: undefined,
+    //     });
+    // }
 
     const { isLoading, error, data } = useQuery('repoData', () =>
         api.post('/webFetchTrailerInfo', {
             trailerId: trailerId
         }).then(res =>
             res.data
-        ), { retry: 2 }
+        ), { retry: 1 }
     );
-
-    const rentButtonTapped = () => {
-        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-            return data['trailerDoc'];
-        } else {
-            return 'https://apps.apple.com/us/app/trailerhub-rent-trailers/id1551725129';
-        }
-    }
 
     if (isLoading) return <Loading />
 
-    if (error) showToast(error.message);
+    //if (error) showToast(error.message);
 
-    if (trailerId === undefined || error || data == null) {
-        <Redirect to="/404" />
+    if (trailerId === undefined || error || data === undefined) {
+        return <Redirect to="/404" />
     }
 
     return (
@@ -56,11 +50,15 @@ const TrailerPage = () => {
                     topLine={`${data['trailerDoc']['modelYear']} ${data['trailerDoc']['manufacturer']} ${data['trailerDoc']['model']} | ${data['trailerDoc']['width']}' x ${data['trailerDoc']['length']}'`}
                     headline={`${data['trailerDoc']['trailerBodyType']}`}
                     description={`${data['trailerDoc']['description']}`}
-                    buttonLinkTo={rentButtonTapped()}
+                    buttonLinkTo={onMobile ? data['trailerDoc']['trailerLink'] : appStoreLink}
                     buttonLabel="Rent on TrailerHub"
                     dailyRate={`$${data['trailerDoc']['dailyRate']}`}
                     location={`${data['trailerDoc']['city']}, ${data['trailerDoc']['state']}`}
                     rating={`${data['trailerDoc']['rating']}`}
+                    gvwr={data['trailerDoc']['gvwr']}
+                    axles={data['trailerDoc']['axles']}
+                    connector={data['trailerDoc']['connectorType']}
+                    hitch={data['trailerDoc']['hitchSize']}
                 />
                 <Contact /></>}
         </div>
