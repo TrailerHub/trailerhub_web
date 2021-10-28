@@ -14,7 +14,7 @@ const HeroSection = () => {
             <HeroWrapper>
                 <HeroContent>
                     <HeroH1>Trailer sharing marketplace</HeroH1>
-                    <HeroP title="TrailerHub">Join our growing community of trailer hosts and renters in Austin, Texas. Sign up on our mobile app to rent trailers near you.</HeroP>
+                    <HeroP title="TrailerHub">Join our growing community of trailer hosts and renters in Texas. Sign up on our mobile app to rent trailers near you.</HeroP>
                     <ButtonsWrapper>
                         <HeroBtnWrapper>
                             <Button to='about' smooth={true} duration={500} spy={true} exact='true' onMouseEnter={onHover} onMouseLeave={onHover

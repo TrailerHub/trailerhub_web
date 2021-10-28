@@ -18,7 +18,7 @@ const HowItWorks = () => {
 
     return (
         <div>
-            <PageHeader radioButton={radioButton} toggleRentHostSteps={toggleRentHostSteps} />
+            <PageHeader heading='How it Works' subtext='Learn how to rent a trailer or get started as a host on TrailerHub.' radioButton={radioButton} toggleRentHostSteps={toggleRentHostSteps} />
             <div className="bg-shape2">
                 {radioButton ?
                     <>

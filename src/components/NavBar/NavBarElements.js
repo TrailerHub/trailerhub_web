@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { Link as LinkR } from 'react-router-dom'
 import { Link as LinkS } from 'react-scroll'
-import { trailerHubBlack } from '../../colors'
+import { trailerHubBlack, trailerHubGreen } from '../../colors'
 
 export const Nav = styled.nav`
     background: ${({ scrollNav }) => scrollNav ? 'rgba(255, 255, 255, 0.5)' : 'transparent'};
@@ -14,8 +14,8 @@ export const Nav = styled.nav`
     position: sticky;
     top: 0;
     z-index: 10;
-    color: ${({ scrollNav }) => scrollNav ? '#000' : '#fff'};
     padding: 0 140px;
+    border-bottom: ${({ dark }) => dark ? '1px solid #F6F8FA' : ''};
 
     @media screen and (max-width: 768px) {
         padding: 0 50px;
@@ -29,6 +29,17 @@ export const Nav = styled.nav`
         transition: 0.8s all ease;
     }
 `;
+
+export const HR = styled.hr`
+    color: ${trailerHubGreen};
+    background-color: ${trailerHubGreen};
+    height: 1px;
+    border-width: 0;
+    opacity: 0.3;
+    width: 85%;
+    margin: 15vh 0;
+    justify-self: center;
+`
 
 export const NavBarContainer = styled.div`
     position: relative;
@@ -51,14 +62,14 @@ export const NavLogo = styled(LinkR)`
 
 export const LogoImage = styled.img`
     width: 100%;
-    filter: ${({ location }) => location === '/howitworks' || location === '/faq' || location === '/learn'  || location === '/insurance'? 'brightness(0) invert(1)' : 'none'};
+    filter: ${({ location }) => location === '/howitworks' || location === '/404' || location === '/faq' || location === '/learn' || location === '/insurance' ? 'brightness(0) invert(1)' : 'none'};
     filter: ${({ scrollNav }) => scrollNav && 'none'};
     
     @media screen and (max-width: 1100px) {
-        filter:  brightness(0) invert(1);
+        filter:  ${({ dark }) => dark ? 'none' : 'brightness(0) invert(1)'};
     }
     @media screen and (max-width: 900px) {
-        filter: ${({ scrollNav }) => scrollNav ? 'none' : 'brightness(0) invert(1)'};
+        filter: ${({ dark }) => dark ? 'none' : 'brightness(0) invert(1)'};
     }
     @media screen and (max-width: 768px) {
         width: 80%;
@@ -70,7 +81,7 @@ export const MobileIcon = styled.div`
     display: none;
 
     @media screen and (max-width: 1100px) {
-        filter: ${({ scrollNav }) => scrollNav ? 'none' : 'brightness(0) invert(1)'};
+        filter: ${({ dark }) => dark ? 'none' : 'brightness(0) invert(1)'};
         display: block;
         position: absolute;
         top: 0;
@@ -103,7 +114,7 @@ export const NavItem = styled.li`
 `;
 
 export const NavLinks = styled(LinkR)`
-    color: ${({ scrollNav }) => scrollNav ? trailerHubBlack : '#fff'};
+    color: ${({ dark }) => dark ? trailerHubBlack : '#fff'};
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -134,7 +145,7 @@ export const NavBtn = styled.div`
 
 export const NavBtnLink = styled(LinkS)`
     border-radius: 12px;
-    background: ${({ scrollNav }) => scrollNav ? '#373737' : 'rgba(255, 255, 255, 0.3)'};
+    background: ${({ dark }) => dark ? '#373737' : 'rgba(255, 255, 255, 0.3)'};
     white-space: nowrap;
     padding: 10px 22px;
     color: #fff;
@@ -151,3 +162,4 @@ export const NavBtnLink = styled(LinkS)`
         background: #373737;
     }
 `;
+
