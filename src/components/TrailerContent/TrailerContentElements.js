@@ -264,3 +264,9 @@ export const IconTextContainer = styled.div`
     justify-content: space-between;
     align-items: center;
 `;
+
+export const FullWidth = styled.div`
+display: flex;
+justify-content: space-between;
+    width: 100%;
+`;
