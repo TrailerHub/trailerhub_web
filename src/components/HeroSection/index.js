@@ -22,7 +22,7 @@ const HeroSection = () => {
                             >Learn More
                             {hover ? <ArrowForward style={{ transform: `rotate(90deg)` }} /> : <ArrowRight style={{ transform: `rotate(90deg)` }} />}</Button>
                         </HeroBtnWrapper>
-                        <LinkButton label={'iOS'} black={true} href={'https://apps.apple.com/us/app/trailerhub-rent-trailers/id1551725129'} />
+                        <LinkButton label={'iPhone'} black={true} href={'https://apps.apple.com/us/app/trailerhub-rent-trailers/id1551725129'} />
                         <LinkButton label={'Android'} black={true} href={'https://play.google.com/store/apps/details?id=io.trailerhub.trailerhub'} />
                     </ButtonsWrapper>
                 </HeroContent>

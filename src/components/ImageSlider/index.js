@@ -19,21 +19,25 @@ const ImageSlider = ({ slides }) => {
 
     return (
         <Slider>
-            <LeftArrow onClick={prevSlide} />
-            <ImgCount>{`${current + 1} / ${slides.length}`}</ImgCount>
-            <RightArrow onClick={nextSlide} />
-            {slides.map((slide, index) => {
-                return (
-                    <Slide
-                        isActive={index === current}
-                        key={index}
-                    >
-                        {index === current && (
-                            <Image src={slide} alt='Trailer' />
-                        )}
-                    </Slide>
-                );
-            })}
+            <>
+                <LeftArrow onClick={prevSlide} />
+                {/* <ImgCount>{`${current + 1} / ${slides.length}`}</ImgCount> */}
+                <RightArrow onClick={nextSlide} />
+            </>
+            <>
+                {slides.map((slide, index) => {
+                    return (
+                        <Slide
+                            isActive={index === current}
+                            key={index}
+                        >
+                            {index === current && (
+                                <Image src={slide} alt='Trailer' />
+                            )}
+                        </Slide>
+                    );
+                })}
+            </>
         </Slider>
     );
 };

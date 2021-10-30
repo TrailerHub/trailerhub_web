@@ -48,7 +48,7 @@ export default function Contact({ light }) {
             </HeadingWrapper>
             <FlexCenter><HR /></FlexCenter>
             <FlexCenter><Subtitle>
-                If you're looking to rent a trailer, download our mobile application using the buttons below to find one near you.
+                Trailer rentals are done exclusively through our mobile app. If you're looking to rent a trailer, download our app using the buttons below.
             </Subtitle></FlexCenter>
             <LinkButtonsWrapper>
                 <LinkButton label={'iPhone'} black={true} href={'https://apps.apple.com/us/app/trailerhub-rent-trailers/id1551725129'} />

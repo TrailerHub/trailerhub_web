@@ -24,7 +24,7 @@ const InfoSection = ({ lightBg, id, imgStart, topLine, lightText, headline, dark
                                         } primary="true" dark="true"
                                         >{buttonLabel}{hover ? <ArrowForward style={{ transform: `rotate(90deg)` }} /> : <ArrowRight style={{ transform: `rotate(90deg)` }} />}</Button>
                                     </BigBtnWrapper>}
-                                {appLinks && <><LinkButton label={'iOS'} black={false} href={'https://apps.apple.com/us/app/trailerhub-rent-trailers/id1551725129'} />
+                                {appLinks && <><LinkButton label={'iPhone'} black={false} href={'https://apps.apple.com/us/app/trailerhub-rent-trailers/id1551725129'} />
                                     <LinkButton label={'Android'} black={false} href={'https://play.google.com/store/apps/details?id=io.trailerhub.trailerhub'} /> </>}
                             </ButtonsWrapper>
                         </TextWrapper>

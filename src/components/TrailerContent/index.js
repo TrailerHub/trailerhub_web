@@ -50,7 +50,7 @@ const TrailerContent = ({ topLine, headline, description, buttonLinkTo, buttonLa
                                     <Icon icon={<svg width="28" height="37" viewBox="0 0 28 37" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M28 13.5859C28 19.1346 24.6736 23.9064 19.9063 26.016L19.9062 29.4844C20.8641 29.4844 21.6406 30.2609 21.6406 31.2187C21.6406 32.1766 20.8641 32.9531 19.9062 32.9531L19.9063 34C19.9063 35.6568 18.5631 37 16.9063 37H12.5C10.8432 37 9.50001 35.6568 9.50001 34L9.5 32.9531C8.54213 32.9531 7.76562 32.1766 7.76562 31.2187C7.76562 30.2609 8.54213 29.4844 9.5 29.4844L9.50001 26.2559C4.42556 24.2864 0.828125 19.3563 0.828125 13.5859C0.828125 6.08263 6.91076 0 14.4141 0C21.9174 0 28 6.08263 28 13.5859Z" fill="black" />
                                     </svg>
-                                    } title={hitch} />
+                                    } title={`${hitch}"`} />
                                 </IconContext.Provider>
                             </IconGrid>
                         </TextWrapper>
