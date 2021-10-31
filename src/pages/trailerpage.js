@@ -35,8 +35,10 @@ const TrailerPage = () => {
     );
 
     if (isLoading) {
+        // console.log("loading");
         return <Loading />
     } else if (trailerId === undefined || error || data === undefined) {
+        // console.log("errored out");
         return <Redirect to="/404" />
     }
 
