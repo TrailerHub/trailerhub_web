@@ -2,16 +2,17 @@ import { Redirect, useLocation } from 'react-router-dom'
 import ImageSlider from '../components/ImageSlider';
 import Contact from '../components/Contact'
 import TrailerContent from '../components/TrailerContent';
-import { toast } from 'react-toastify';
 import api from '../service/api';
 import { useQuery } from 'react-query'
 import Loading from '../components/Loading';
+import useWindowDimensions from '../hooks/useWindowDimensions';
 
 const TrailerPage = () => {
     const loc = useLocation();
+    const { width } = useWindowDimensions();
     let params = new URLSearchParams(loc.search);
     const trailerId = params.get('id');
-    const onMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const onMobile = width <= 550;
     const appStoreLink = 'https://apps.apple.com/us/app/trailerhub-rent-trailers/id1551725129';
 
     // const showToast = (msg) => {
@@ -50,7 +51,7 @@ const TrailerPage = () => {
                     topLine={`${data['trailerDoc']['modelYear']} ${data['trailerDoc']['manufacturer']} ${data['trailerDoc']['model']} | ${data['trailerDoc']['width']}' x ${data['trailerDoc']['length']}'`}
                     headline={`${data['trailerDoc']['trailerBodyType']}`}
                     description={`${data['trailerDoc']['description']}`}
-                    buttonLinkTo={onMobile ? data['trailerDoc']['trailerLink'] : appStoreLink}
+                    buttonLinkTo={onMobile ? data['trailerLink'] : appStoreLink}
                     buttonLabel="Rent on TrailerHub"
                     dailyRate={`$${data['trailerDoc']['dailyRate']}`}
                     location={`${data['trailerDoc']['city']}, ${data['trailerDoc']['state']}`}

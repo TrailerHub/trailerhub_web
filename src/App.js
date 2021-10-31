@@ -49,8 +49,7 @@ function App() {
             <Route exact path="/insurance" component={InsurancePage} />
             <Route exact path="/trailer/:id" component={TrailerPage} />
             <Route exact path="/trailer" component={TrailerPage} />
-            <Route exact path="/404" component={NotFoundPage} />
-            <Redirect to="/404" />
+            <Route component={NotFoundPage} />
           </Switch>
           <Footer />
         </div>
