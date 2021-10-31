@@ -34,11 +34,9 @@ const TrailerPage = () => {
         ), { retry: 1 }
     );
 
-    if (isLoading) return <Loading />
-
-    //if (error) showToast(error.message);
-
-    if (trailerId === undefined || error || data === undefined) {
+    if (isLoading) {
+        return <Loading />
+    } else if (trailerId === undefined || error || data === undefined) {
         return <Redirect to="/404" />
     }
 
