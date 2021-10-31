@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "type": "pwa-chrome",
+            "name": "localhost:3000/trailer/?id=3f5c711b-cab8-4137-b5af-24268e7841e2",
+            "request": "launch",
+            "url": "localhost:3000/trailer/?id=3f5c711b-cab8-4137-b5af-24268e7841e2"
+        }
+    ]
+}

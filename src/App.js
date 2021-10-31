@@ -48,6 +48,7 @@ function App() {
             <Route exact path="/termsofservicedoc" component={ToS} />
             <Route exact path="/insurance" component={InsurancePage} />
             <Route exact path="/trailer/:id" component={TrailerPage} />
+            <Route exact path="/trailer/?id" component={TrailerPage} />
             <Route exact path="/trailer" component={TrailerPage} />
             <Route component={NotFoundPage} />
           </Switch>
