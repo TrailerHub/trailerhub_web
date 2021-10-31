@@ -48,9 +48,11 @@ function App() {
             <Route exact path="/termsofservicedoc" component={ToS} />
             <Route exact path="/insurance" component={InsurancePage} />
             <Route exact path="/trailer/:id" component={TrailerPage} />
+            <Route exact path="/trailer/?id" component={TrailerPage} />
             <Route exact path="/trailer" component={TrailerPage} />
             <Route exact path="/404" component={NotFoundPage} />
-            <Redirect to="/404" />
+            <Redirect to="/" />
+            {/* <Redirect to="/404" /> */}
           </Switch>
           <Footer />
         </div>
