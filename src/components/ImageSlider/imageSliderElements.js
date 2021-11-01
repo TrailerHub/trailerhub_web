@@ -4,7 +4,7 @@ import { trailerHubGreen, } from '../../colors'
 
 export const Slider = styled.section`
     position: relative;
-    margin: 16vh 0 8vh;
+    margin: 10vh 0 8vh;
     display: grid;
     grid-template-columns: 1fr;
     /* display: flex; */

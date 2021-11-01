@@ -6,6 +6,7 @@ import api from '../service/api';
 import { useQuery } from 'react-query'
 import Loading from '../components/Loading';
 import useWindowDimensions from '../hooks/useWindowDimensions';
+import { CenterFlex, Container, SubHeading, Heading, ArrowContainer, DownArrow } from '../components/TrailerSection/TrailerPageElements';
 
 const TrailerPage = () => {
     const loc = useLocation();
@@ -44,25 +45,41 @@ const TrailerPage = () => {
     }
 
     return (
-        <div>
-            {data !== undefined && <>{data['trailerImages'] !== undefined &&
-                <ImageSlider slides={data['trailerImages'] ?? []} />}
-                <TrailerContent
-                    topLine={`${data['trailerDoc']['modelYear']} ${data['trailerDoc']['manufacturer']} ${data['trailerDoc']['model']} | ${data['trailerDoc']['width']}' x ${data['trailerDoc']['length']}'`}
-                    headline={`${data['trailerDoc']['trailerBodyType']}`}
-                    description={`${data['trailerDoc']['description']}`}
-                    buttonLinkTo={onMobile ? data['trailerLink'] : appStoreLink}
-                    buttonLabel="Rent on TrailerHub"
-                    dailyRate={`$${data['trailerDoc']['dailyRate']}`}
-                    location={`${data['trailerDoc']['city']}, ${data['trailerDoc']['state']}`}
-                    rating={`${data['trailerDoc']['rating']}`}
-                    gvwr={data['trailerDoc']['gvwr']}
-                    axles={data['trailerDoc']['axles']}
-                    connector={data['trailerDoc']['connectorType']}
-                    hitch={data['trailerDoc']['hitchSize']}
-                />
-                <Contact /></>}
-        </div>
+        <div id="trailerPage">
+                        <Container>
+                <div>
+                    <Heading>Rent on TrailerHub</Heading>
+                    <CenterFlex><SubHeading>TrailerHub is a trailer sharing marketplace where you can rent trailers from trailer owners in your community.
+                            Think of it like AirBnb, but for trailers instead of houses. Press the "Rent on TrailerHub" button below to rent this trailer through
+                            our mobile app, or to view other trailers like it available in your area.</SubHeading></CenterFlex>
+                            <ArrowContainer>
+                        <DownArrow />
+                    </ArrowContainer>
+                </div>
+            </Container>
+                {data !== undefined && <>
+
+                    {data['trailerImages'] !== undefined && <ImageSlider slides={data['trailerImages'] ?? []} />}
+
+                    <TrailerContent
+                        topLine={`${data['trailerDoc']['modelYear']} ${data['trailerDoc']['manufacturer']} ${data['trailerDoc']['model']} | ${data['trailerDoc']['width']}' x ${data['trailerDoc']['length']}'`}
+                        headline={`${data['trailerDoc']['trailerBodyType']}`}
+                        description={`${data['trailerDoc']['description']}`}
+                        buttonLinkTo={onMobile ? data['trailerLink'] : appStoreLink}
+                        buttonLabel="Rent on TrailerHub"
+                        dailyRate={`$${data['trailerDoc']['dailyRate']}`}
+                        location={`${data['trailerDoc']['city']}, ${data['trailerDoc']['state']}`}
+                        rating={`${data['trailerDoc']['rating']}`}
+                        gvwr={data['trailerDoc']['gvwr']}
+                        axles={data['trailerDoc']['axles']}
+                        connector={data['trailerDoc']['connectorType']}
+                        hitch={data['trailerDoc']['hitchSize']}
+                    />
+            <Contact />
+
+                </>}
+            </div>
+
     )
 }
 
