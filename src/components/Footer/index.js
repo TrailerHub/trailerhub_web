@@ -25,6 +25,9 @@ const Footer = ({path}) => {
                     <FooterSubHeading>Company</FooterSubHeading>
                     <FooterLink to="/" smooth={true} duration={500} spy={true} exact='true' onClick={() => toggleHome()}>About</FooterLink>
                     <FooterLink to="/howitworks" smooth={true} duration={500} spy={true} exact='true' onClick={() => toggleHome()}>How it works</FooterLink>
+                    <FooterLink to="/faq" smooth={true} duration={500} spy={true} exact='true' onClick={() => toggleHome()}>FAQ</FooterLink>
+                    <FooterLink to="/learn" smooth={true} duration={500} spy={true} exact='true' onClick={() => toggleHome()}>Learn</FooterLink>
+                    <FooterLink to="/insurance" smooth={true} duration={500} spy={true} exact='true' onClick={() => toggleHome()}>Insurance</FooterLink>
                 </ContentContainer>
                 <ContentContainer>
                     <ContactContentContainer>

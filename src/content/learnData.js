@@ -22,7 +22,7 @@ export const learnData = [
     {
         id: 3,
         url: 'https://www.trailersuperstore.com/tips-for-driving-with-a-large-trailer/',
-        imageUrl: 'https://www.trailersuperstore.com/media/2019/02/4-Tips-for-Towing-.jpg',
+        imageUrl: 'https://www.trailersuperstore.com/content/uploads/2019/02/1-for-Driving-with-a-Large-Trailer.jpg',
         alt: 'Truck towing a trailer',
         title: 'Tips for Driving With a Large Trailer',
         author: 'Trailer Superstore',
@@ -40,7 +40,7 @@ export const learnData = [
     {
         id: 5,
         url: 'https://www.trailersuperstore.com/how-to-replace-a-trailer-tire/',
-        imageUrl: 'https://www.trailersuperstore.com/media/2019/04/1-How-to-Replace-a-Trailer-Tire-1.jpg',
+        imageUrl: 'https://www.trailersuperstore.com/content/uploads/2019/04/1-How-to-Replace-a-Trailer-Tire-1.jpg',
         alt: 'Image of a tire with the text "How to replace a trailer tire"',
         title: 'How to Replace a Trailer Tire',
         author: 'Trailer Superstore',
