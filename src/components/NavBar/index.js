@@ -8,7 +8,7 @@ const NavBar = ({ toggle }) => {
     const [scrollNav, setScrollNav] = useState(false);
     const [location, setLocation] = useState(useLocation().pathname);
     var currentLocation = useLocation().pathname;
-    var dark = scrollNav || location.includes('trailer/');
+    var dark = scrollNav;
 
     const changeNav = () => {
         window.scrollY >= 80 ? setScrollNav(true) : setScrollNav(false);

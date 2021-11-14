@@ -3,6 +3,8 @@ import { Link as LinkR } from 'react-router-dom'
 import { Link as LinkS } from 'react-scroll'
 import { trailerHubBlack, trailerHubGreen } from '../../colors'
 
+const whiteNavRoutes = ['/howitworks', '/404', '/faq', '/learn', '/trailer', '/insurance'];
+
 export const Nav = styled.nav`
     background: ${({ scrollNav }) => scrollNav ? 'rgba(255, 255, 255, 0.5)' : 'transparent'};
     height: 80px;
@@ -62,7 +64,7 @@ export const NavLogo = styled(LinkR)`
 
 export const LogoImage = styled.img`
     width: 100%;
-    filter: ${({ location }) => location === '/howitworks' || location === '/404' || location === '/faq' || location === '/learn' || location === '/insurance' ? 'brightness(0) invert(1)' : 'none'};
+    filter: ${({ location }) => location !== '/' ? 'brightness(0) invert(1)' : 'none'};
     filter: ${({ scrollNav }) => scrollNav && 'none'};
     
     @media screen and (max-width: 1100px) {
